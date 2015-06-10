@@ -1,0 +1,651 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <!--json2-->
+    <script src="/js/json2.js"></script>
+    <!-- basic styles -->
+    <link href="/plugins/ace/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/plugins/ace/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- fonts -->
+    <link href="/plugins/googlecdn/css.css" rel="stylesheet" />
+    <!-- ace styles -->
+    <link rel="stylesheet" href="/plugins/ace/assets/css/ace.min.css" />
+    <link rel="stylesheet" href="/plugins/ace/assets/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="/plugins/ace/assets/css/ace-skins.min.css" />
+
+    <!-- ace settings handler -->
+    <script src="/plugins/ace/assets/js/ace-extra.min.js"></script>
+    <!-- basic scripts -->
+    <script src="/plugins/ace/assets/js/jquery-2.0.3.min.js"></script>
+    <script src="/plugins/ace/assets/js/bootstrap.min.js"></script>
+    <!-- ace scripts -->
+
+    <script src="/plugins/ace/assets/js/ace-elements.min.js"></script>
+    <script src="/plugins/ace/assets/js/ace.min.js"></script>
+    <!--cookies-->
+    <script src="/plugins/venusoft/cookies.js"></script>
+    <!--表单参数-->
+    <script src="/plugins/venusoft/jquery.formparam.js"></script>
+    <!--loading-->
+    <link href="/plugins/venusoft/loading/css.css" rel="stylesheet" />
+    <script src="/plugins/venusoft/loading/jquery.loading.js"></script>
+
+    <!--AngularJs-->
+        <script src="/plugins/angularjs/1.3.0-beta.13/angular.min.js"></script>
+    <script src="/plugins/angularjs/1.3.0-beta.13/angular-sanitize.min.js"></script>
+
+
+    <!-- 百度编辑器公共变量-->
+    <script>
+        window.UEDITOR_HOME_URL = "/plugins/ueditor1_4_3-utf8-net/";
+    </script>
+
+    <%--    <script>
+        var beforeURL = serverHost + "/login.html"
+        if (document.referrer != beforeURL) {
+            window.location.href = beforeURL;
+        }
+    </script>--%>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <div class="navbar navbar-default" id="navbar">
+            <script type="text/javascript">
+                try { ace.settings.check('navbar', 'fixed') } catch (e) { }
+            </script>
+
+            <div class="navbar-container" id="navbar-container">
+                <div class="navbar-header pull-left">
+                    <a href="#" class="navbar-brand">
+                        <small>
+                            <i class="icon-leaf"></i>
+                            上海市交通学校
+                        </small>
+                    </a>
+                    <!-- /.brand -->
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">
+                        <li class="grey">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-tasks"></i>
+                                <span class="badge badge-grey"></span>
+                            </a>
+
+                            <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                                <li class="dropdown-header">
+                                    <i class="icon-ok"></i>
+                                    没有任务
+                                </li>
+
+                                <li>
+                                    <a href="#">查看任务详情
+										<i class="icon-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="purple">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-bell-alt"></i>
+                                <span class="badge badge-important"></span>
+                            </a>
+
+                            <ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                                <li class="dropdown-header">
+                                    <i class="icon-warning-sign"></i>
+                                    暂无通知
+                                </li>
+
+                                <li>
+                                    <a href="#">查看所有通知
+										<i class="icon-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="green">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-envelope"></i>
+                                <span class="badge badge-success"></span>
+                            </a>
+
+                            <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                                <li class="dropdown-header">
+                                    <i class="icon-envelope-alt"></i>
+                                    没有消息
+                                </li>
+
+                                <li>
+                                    <a href="inbox.html">查看所有消息
+										<i class="icon-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="light-blue">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <img class="nav-user-photo" src="/plugins/ace/assets/avatars/user.jpg" alt="Jason's Photo" />
+                                <span class="user-info">
+                                    <small>欢迎光临,</small>
+                                    <span runat="server" id="userName"></span>
+                                </span>
+                                <i class="icon-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-cog"></i>
+                                        设置
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-user"></i>
+                                        个人资料
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" id="resultPassword">
+                                        <i class="icon-cog"></i>
+                                        重置密码
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a>
+
+                                        <a href="/Login.aspx"><i class="icon-off"></i>退出</a>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- /.ace-nav -->
+                </div>
+                <!-- /.navbar-header -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+        <div class="main-container" id="main-container">
+            <script type="text/javascript">
+                try { ace.settings.check('main-container', 'fixed') } catch (e) { }
+            </script>
+
+            <div class="main-container-inner">
+                <a class="menu-toggler" id="menu-toggler" href="#">
+                    <span class="menu-text"></span>
+                </a>
+
+                <div class="sidebar" id="sidebar">
+                    <script type="text/javascript">
+                        try { ace.settings.check('sidebar', 'fixed') } catch (e) { }
+                    </script>
+
+                    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+                        <%--           <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                            <button class="btn btn-success">
+                                <i class="icon-signal"></i>
+                            </button>
+
+                            <button class="btn btn-info">
+                                <i class="icon-pencil"></i>
+                            </button>
+
+                            <button class="btn btn-warning">
+                                <i class="icon-group"></i>
+                            </button>
+
+                            <button class="btn btn-danger">
+                                <i class="icon-cogs"></i>
+                            </button>
+                        </div>--%>
+
+                        <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                            <span class="btn btn-success"></span>
+
+                            <span class="btn btn-info"></span>
+
+                            <span class="btn btn-warning"></span>
+
+                            <span class="btn btn-danger"></span>
+                        </div>
+                    </div>
+                    <!-- #sidebar-shortcuts -->
+
+                    <ul class="nav nav-list">
+                        <li>
+                            <a href="/Index.aspx">
+                                <i class="icon-home"></i>
+                                <span class="menu-text">首页 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-list"></i>
+                                <span class="menu-text">内容管理 </span>
+
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="/Base/Basic_SchoolInfo.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        学校概况
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Base/Basic_SpecialtyManager.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        专业介绍
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Base/Basic_CampusManager.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        校园地图
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Base/Basic_TelephoneDirectoryManager.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        校园黄页
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Base/Basic_NewsManager.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        校园新闻
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Base/Basic_NoticeManager.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        通知公告
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Base/Basic_NewsManager.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        行业动态
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-eye-open"></i>
+                                <span class="menu-text">发现管理</span>
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="/Base/Basic_KingManager.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        全民校草
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Base/Basic_QueenManager.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        全民校花
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/Base/Basic_TeacherManager.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        可爱老师
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="/Base/Basic_AppCenter.aspx" class="dropdown-toggle">
+                                <i class="icon-dashboard"></i>
+                                <span class="menu-text">应用中心</span>
+                            </a>
+
+
+                        </li>
+
+
+                        <li>
+                            <a href="/Base/Basic_AddressList.aspx" class="dropdown-toggle">
+                                <i class="icon-group"></i>
+                                <span class="menu-text">通讯录</span>
+                            </a>
+
+                        </li>
+
+
+
+                        <li>
+                            <a href="/Base/Basic_UsageAnalysis.aspx" class="dropdown-toggle">
+                                <i class="icon-bar-chart"></i>
+                                <span class="menu-text">使用分析</span>
+                            </a>
+
+
+                        </li>
+
+                        <li>
+                            <a href="/Base/Basic_Setting.aspx" class="dropdown-toggle">
+                                <i class="icon-cogs"></i>
+                                <span class="menu-text">设置</span>
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+                    <!-- /.nav-list -->
+
+                    <div class="sidebar-collapse" id="sidebar-collapse">
+                        <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+                    </div>
+
+                    <script type="text/javascript">
+                        try { ace.settings.check('sidebar', 'collapsed') } catch (e) { }
+                    </script>
+                </div>
+
+                <div class="main-content">
+                    <div class="breadcrumbs" id="breadcrumbs">
+                        <script type="text/javascript">
+                            try { ace.settings.check('breadcrumbs', 'fixed') } catch (e) { }
+                        </script>
+
+                        <ul class="breadcrumb">
+                            <li>
+                                <i class="icon-home home-icon"></i>
+                                <a href="#">首页</a>
+                            </li>
+
+                            <li>
+                                <a id="modelName" href="#">UI Elements</a>
+                            </li>
+                            <li id="cellName" class="active">Elements</li>
+                        </ul>
+                        <!-- .breadcrumb -->
+
+                        <div class="nav-search" id="nav-search">
+                            <form class="form-search">
+                                <span class="input-icon">
+                                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                                    <i class="icon-search nav-search-icon"></i>
+                                </span>
+                            </form>
+                        </div>
+                        <!-- #nav-search -->
+                    </div>
+
+                    <div class="page-content">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!-- /.page-content -->
+                </div>
+                <!-- /.main-content -->
+
+                <div class="ace-settings-container" id="ace-settings-container">
+                    <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+                        <i class="icon-cog bigger-150"></i>
+                    </div>
+
+                    <div class="ace-settings-box" id="ace-settings-box">
+                        <div>
+                            <div class="pull-left">
+                                <select id="skin-colorpicker" class="hide">
+
+                                    <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                                    <option data-skin="default" value="#438EB9">#438EB9</option>
+                                    <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                                    <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                                </select>
+                            </div>
+                            <span>&nbsp; 选择皮肤</span>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+                            <label class="lbl" for="ace-settings-navbar">固定导航条</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+                            <label class="lbl" for="ace-settings-sidebar">固定滑动条</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+                            <label class="lbl" for="ace-settings-breadcrumbs">固定面包屑</label>
+                        </div>
+
+                        <%--   <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+                            <label class="lbl" for="ace-settings-rtl">切换到左边</label>
+                        </div>--%>
+
+                        <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+                            <label class="lbl" for="ace-settings-add-container">
+                                切换窄屏
+								<b></b>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- /#ace-settings-container -->
+            </div>
+            <!-- /.main-container-inner -->
+
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="icon-double-angle-up icon-only bigger-110"></i>
+            </a>
+        </div>
+
+        <div class="modal fade" id="resetPasswordDIV" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">重置密码</h4>
+                    </div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 70%">
+                                <div class="modal-body">
+
+                                    <div class="row">
+                                        <div class="col-xs-2" style="width: 25%;">
+                                            <font color="red">*</font>旧密码
+                                        </div>
+                                        <div class="col-xs-2" style="width: 75%;">
+                                            <input id="LoginedID" name="LoginedID" type="hidden" value="" runat="server" />
+                                            <input type="password" id="oldPassword" name="oldPassword" placeholder="请输入旧密码" />
+                                        </div>
+                                    </div>
+
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-xs-2" style="width: 25%;">
+                                            <font color="red">*</font>新密码
+                                        </div>
+                                        <div class="col-xs-2" style="width: 75%;">
+                                            <input type="password" id="newPassword" name="newPassword" placeholder="请输入新密码" />
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-xs-2" style="width: 25%;">
+                                            <font color="red">*</font>确认新密码
+                                        </div>
+                                        <div class="col-xs-2" style="width: 75%;">
+                                            <input type="password" id="newPasswordAgain" name="newPasswordAgain" placeholder="请再次输入新密码" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p style="font-size: 14px; color: red;" id="errorMessage"></p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-success" id="btnSave">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.main-container -->
+
+
+
+        <!-- inline scripts related to this page -->
+
+        <script type="text/javascript">
+
+
+            $(function () {
+                $("#errorMessage").html("");
+                //var fullUrl = location.href;
+                //var paramUrl = fullUrl.substr(fullUrl.indexOf("?") + 1);
+                //var params = paramUrl.split('=');
+                //var loginKey = params[0];
+                //var loginValue = params[1];
+                //$("#userName").html(loginValue);
+
+                //设置默认样式
+                ace.settings.navbar_fixed(true);
+                $("#ace-settings-navbar").attr("checked", true);
+                ace.settings.sidebar_fixed(true);
+                $("#ace-settings-sidebar").attr("checked", true);
+                ace.settings.breadcrumbs_fixed(true);
+                $("#ace-settings-breadcrumbs").attr("checked", true);
+                ace.settings.main_container_fixed(false);
+                $("#ace-settings-add-container").attr("checked", false);
+                var navbar_fixed = cookies.getCookie("navbar_fixed");
+                if (navbar_fixed == "0") {
+                    ace.settings.navbar_fixed(false);
+                    $("#ace-settings-navbar").attr("checked", false);
+                }
+                var sidebar_fixed = cookies.getCookie("sidebar_fixed");
+                if (sidebar_fixed == "0") {
+                    ace.settings.sidebar_fixed(false);
+                    $("#ace-settings-sidebar").attr("checked", false);
+                }
+                var breadcrumbs_fixed = cookies.getCookie("breadcrumbs_fixed");
+                if (breadcrumbs_fixed == "0") {
+                    ace.settings.breadcrumbs_fixed(false);
+                    $("#ace-settings-breadcrumbs").attr("checked", false);
+                }
+                var main_container_fixed = cookies.getCookie("main_container_fixed");
+                if (main_container_fixed == "0") {
+                    ace.settings.main_container_fixed(false);
+                    $("#ace-settings-add-container").attr("checked", false);
+                }
+
+
+                //设置当前菜单状态
+                var url = window.location.pathname;
+                $("a[href='" + url + "']").parent().addClass("active");
+                $("a[href='" + url + "']").parent().parent().parent().addClass("active open");
+
+            });
+
+            //重置密码
+            $("#resultPassword").click(function () {
+                $('#resetPasswordDIV').modal({
+                    keyboard: true
+                });
+
+            });
+
+            //--Start重置密码保存 --------
+            $("#btnSave").click(function () {
+                var userNo = $("#LoginedID");
+                var odPassword = $("#oldPassword");
+                var newPassword = $("#newPassword");
+                var newPasswordAgain = $("#newPasswordAgain");
+                var errorMessage = $("#errorMessage");
+                if (userNo.val() == null || userNo.val() == "") {
+                    errorMessage.html("系统异常，未能检测到当前用户的用户名");
+                    return;
+                } else if (odPassword.val() == null || odPassword.val() == "") {
+                    errorMessage.html("旧密码不能为空");
+                    return;
+                } else if (newPassword.val() == null || newPassword.val() == "") {
+                    errorMessage.html("新密码不能为空");
+                    return;
+                } else if (newPassword.val() != newPasswordAgain.val()) {
+                    errorMessage.html("两次新密码输入不一致，请重新输入");
+                    return;
+                }
+
+                if (serverHost != "") {
+                    var url = "MobileService/UserService/UserService.asmx/UpdateSys_User";
+
+                    var para = { "userNo": userNo.val(), "oldPassword": odPassword.val(), "newPassword": newPassword.val() };
+                    $.ajax({
+                        type: 'Post',
+                        contentType: "application/json; charset=utf-8",
+                        url: url,
+                        data: MY_JSON.stringify(para),
+                        dataType: "json",
+                        success: function (result) {
+                            var returnVal = MY_JSON.parse(result.d);
+                            if (returnVal.ReturnFlag == "1") {
+
+                                odPassword.val("");
+                                newPassword.val("");
+                                newPasswordAgain.val("");
+                                errorMessage.html("");
+                                $('#resetPasswordDIV').modal('hide');
+                            } else {
+                                errorMessage.html(returnVal.ReturnMessage);
+
+                            }
+                        },
+                        error: function (error) {
+                            errorMessage.html("发生未知错误，更新失败");
+                        }
+                    });
+                }
+            });
+            //--End 重置密码保存--------
+        </script>
+
+    </form>
+</body>
+</html>

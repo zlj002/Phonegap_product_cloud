@@ -1,0 +1,120 @@
+﻿.transparent_class {
+    /*filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    width: 70px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;*/
+    position: absolute;
+    left: 10px;
+    top:-10px;
+    z-index: 100;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+}
+
+
+.cancelFile {
+    font-style: italic;
+    color: Blue;
+    cursor: pointer;
+}
+
+.deleteFile {
+    font-style: italic;
+    color: Blue;
+    cursor: pointer;
+}
+
+.imguploading {
+    display: block;
+    background: url(../images/loading.gif) no-repeat 0 0;
+    margin-left: 18px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 10px;
+}
+
+/*附件图标*/
+.liIcon {
+    display: block;
+    background: url(../images/fujian.png) no-repeat 0 0;
+    padding: 0 0 0 20px;
+    margin-bottom: 5px;
+}
+/*word图标*/
+.liIconDoc {
+    display: block;
+    background: url(../images/fu_doc.gif) no-repeat 0 0;
+    padding: 0 0 0 20px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+/*Xls图标*/
+.liIconXls {
+    display: block;
+    background: url(../images/fu_exl.gif) no-repeat 0 0;
+    padding: 0 0 0 20px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+/*PPT图标*/
+.liIconPPT {
+    display: block;
+    background: url(../images/fu_ppt.gif) no-repeat 0 0;
+    padding: 0 0 0 20px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+/*图片图标*/
+.liIconIMG {
+    display: block;
+    background: url(../images/images.png) no-repeat 0 0;
+    padding: 0 0 0 20px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+/*Txt图标*/
+.liIconTXT {
+    display: block;
+    background: url(../images/fu_txt.gif) no-repeat 0 0;
+    padding: 0 0 0 20px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+/*JS图标*/
+.liIconJS {
+    display: block;
+    background: url(../images/script_yellow.png) no-repeat 0 0;
+    padding: 0 0 0 20px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+
+
+
+.aFile {
+    text-decoration: none;
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+
+.aFilePreView {
+    text-decoration: none;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.spanFileIcon {
+    width: 16px;
+    height: 16px;
+    background: url(../images/fujian.png) no-repeat 0 0;
+}

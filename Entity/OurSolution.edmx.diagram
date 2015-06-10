@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d1799ed155bf4ab1937dff46d826db29" Name="关系图1" ZoomLevel="68">
+         
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Campus" Width="1.5" PointX="8.6016126277864053" PointY="26.862983254186336" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Device" Width="1.5" PointX="5.0283350353261156" PointY="31.778058960930473" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_DeviceToken" Width="1.5" PointX="11.334176838087931" PointY="17.605455257746137" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Notice" Width="1.5" PointX="11.125" PointY="26.125" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_NoticeUser_Relationship" Width="1.5" PointX="4.7482951920238765" PointY="22.686659823491546" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_Log" Width="1.5" PointX="7.6017853094273189" PointY="22.690324212745914" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Group" Width="1.5" PointX="8.4844178187122647" PointY="27.648907406092114" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_GroupUser_Relationship" Width="1.5" PointX="1.625" PointY="0.625" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_GroupUser_Basic_Group" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Organize" Width="1.5" PointX="8.758900661374863" PointY="5.1349533820221911" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_OrganizeUser_Relationship" Width="1.5" PointX="3.8344575333569466" PointY="6.4862924397393558" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Basic_Organize" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_Feature" Width="1.5" PointX="3" PointY="11.875" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_Feature_Authority" Width="1.5" PointX="5.25" PointY="14.375" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_School" Width="1.5" PointX="0.75" PointY="14.5" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_School_Extend" Width="1.5" PointX="2.75" PointY="3.75" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_Campus_Sys_School" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_DeviceToken_Sys_School" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_Group_Sys_School" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_GroupUser_Sys_School" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Sys_School" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_Feature_Authority_Sys_Feature" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_Feature_Sys_School" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_Feature_Authority_Sys_School" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_User" Width="1.5" PointX="0.75" PointY="8.5" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_DeviceToken_Sys_User" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_GroupUser_Sys_User" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Sys_User" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_TelephoneDirectory" Width="1.5" PointX="3" PointY="17" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_TelephoneDirectory_Sys_School" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_NewsCategory" Width="1.5" PointX="3" PointY="45.25" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_NewsColumn_Sys_School" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Attachment" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="OurSolutionModel.Message_RegisterMobile" Width="1.5" PointX="10.375" PointY="9.75" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Class" Width="1.5" PointX="6" PointY="17.625" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Specialty" Width="1.5" PointX="3" PointY="26.5" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Student" Width="1.5" PointX="8.25" PointY="17.25" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_Student_Basic_Class" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_Specialty_Sys_School" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_Student_Basic_Specialty" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_Student_Sys_User" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_News" Width="1.5" PointX="7.25" PointY="32" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_News_Basic_NewsCategory" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_News_Sys_School" />
+        <EntityTypeShape EntityType="OurSolutionModel.Message_SchoolKeys" Width="1.5" PointX="3" PointY="9.5" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_OtherSysInterfaceAddr" Width="1.5" PointX="5.375" PointY="9.75" />
+        <AssociationConnector Association="OurSolutionModel.FK_Message_SchoolKeys_Sys_School" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_SMSDetailLog" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_Config" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="OurSolutionModel.VenuSoft_Message_NotFullRemind" Width="1.5" PointX="13.625" PointY="6" />
+        <EntityTypeShape EntityType="OurSolutionModel.VenuSoft_User" Width="1.5" PointX="11.375" PointY="5" />
+        <AssociationConnector Association="OurSolutionModel.FK_VenuSoft_Message_NotFullRemind_VenuSoft_User" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_Theme" Width="1.5" PointX="3" PointY="36.875" />
+        <AssociationConnector Association="OurSolutionModel.Sys_SchoolTheme_Relationship" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_PushMessage" Width="1.5" PointX="12.375" PointY="9.75" />
+        <EntityTypeShape EntityType="OurSolutionModel.Content_Article" Width="1.5" PointX="16.625" PointY="9.125" />
+        <EntityTypeShape EntityType="OurSolutionModel.Content_ArticleSlide" Width="1.5" PointX="18.875" PointY="10.5" />
+        <EntityTypeShape EntityType="OurSolutionModel.Content_Category" Width="1.5" PointX="14.375" PointY="9.625" />
+        <AssociationConnector Association="OurSolutionModel.FK_Content_Article_Content_Category" />
+        <AssociationConnector Association="OurSolutionModel.FK_Content_ArticleSlide_Content_Article1" />
+        <AssociationConnector Association="OurSolutionModel.FK_Content_Category_Content_Category" />
+        <AssociationConnector Association="OurSolutionModel.FK_Content_Article_Sys_School" />
+        <AssociationConnector Association="OurSolutionModel.FK_Content_Category_Sys_School" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_Role" Width="1.5" PointX="0.75" PointY="22.25" />
+        <AssociationConnector Association="OurSolutionModel.Sys_RoleUser" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_Menu" Width="1.5" PointX="0.75" PointY="21.75" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_Operation" Width="1.5" PointX="3" PointY="27.25" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_RoleMenuOperation" Width="1.5" PointX="8.25" PointY="27.125" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_Menu_Sys_Menu" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Menu" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Operation" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Role" />
+        <AssociationConnector Association="OurSolutionModel.Sys_MenuOperation" />
+        <AssociationConnector Association="OurSolutionModel.Sys_RoleMenu" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_TeacherInfo" Width="1.5" PointX="3.375" PointY="61" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_TeacherInfo_Education" Width="1.5" PointX="5.625" PointY="63.375" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_TeacherInfo_Experience" Width="1.5" PointX="5.625" PointY="72.625" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_TeacherInfo_Fruit" Width="1.5" PointX="5.625" PointY="58.875" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_TeacherInfo_Practice" Width="1.5" PointX="5.625" PointY="77.25" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_TeacherInfo_Reward" Width="1.5" PointX="5.625" PointY="53.875" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_TeacherInfo_Training" Width="1.5" PointX="5.625" PointY="68" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_TeacherInfo_Education_Basic_TeacherInfo" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_TeacherInfo_Experience_Basic_TeacherInfo" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_TeacherInfo_Fruit_Basic_TeacherInfo" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_TeacherInfo_Practice_Basic_TeacherInfo" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_TeacherInfo_Reward_Basic_TeacherInfo" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_TeacherInfo_Sys_User" />
+        <AssociationConnector Association="OurSolutionModel.FK_Basic_TeacherInfo_Training_Basic_TeacherInfo_Training" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Department" Width="1.5" PointX="1.125" PointY="66.5" />
+        <AssociationConnector Association="OurSolutionModel.Basic_DepartmentTeacher" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_Hobby" Width="1.5" PointX="7.375" PointY="0.75" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_Menu_Sys_School" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_School_Extend_Sys_School" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_DictCode" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="OurSolutionModel.Basic_DictCodeType" Width="1.5" PointX="7.375" PointY="13.75" />
+        <EntityTypeShape EntityType="OurSolutionModel.Sys_School_PanelContent" Width="1.5" PointX="3" PointY="49.375" />
+        <AssociationConnector Association="OurSolutionModel.FK_Sys_School_PanelContent_Sys_School" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

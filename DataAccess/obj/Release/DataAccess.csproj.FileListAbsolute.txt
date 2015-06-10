@@ -1,0 +1,12 @@
+E:\workspace\VenuSoft_Cloud\DataAccess\bin\Release\DataAccess.dll
+E:\workspace\VenuSoft_Cloud\DataAccess\bin\Release\DataAccess.pdb
+E:\workspace\VenuSoft_Cloud\DataAccess\bin\Release\Entity.dll
+E:\workspace\VenuSoft_Cloud\DataAccess\bin\Release\EntityFramework.dll
+E:\workspace\VenuSoft_Cloud\DataAccess\bin\Release\EntityFramework.SqlServer.dll
+E:\workspace\VenuSoft_Cloud\DataAccess\bin\Release\OurHelper.dll
+E:\workspace\VenuSoft_Cloud\DataAccess\bin\Release\Microsoft.Http.dll
+E:\workspace\VenuSoft_Cloud\DataAccess\bin\Release\Entity.pdb
+E:\workspace\VenuSoft_Cloud\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
+E:\workspace\VenuSoft_Cloud\DataAccess\obj\Release\DataAccess.dll
+E:\workspace\VenuSoft_Cloud\DataAccess\obj\Release\DataAccess.pdb
+E:\workspace\VenuSoft_Cloud\DataAccess\bin\Release\Newtonsoft.Json.dll

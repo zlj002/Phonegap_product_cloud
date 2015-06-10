@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{156C67A3-AFF5-410D-9C61-E94B7DB8A255}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="OurHelper">
+      <HintPath>..\Libs\OurHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Interface\IRepository.cs" />
+    <Compile Include="Base\Repository\RepositoryBase.cs" />
+    <Compile Include="Base\Repository\RootRepositoryBase.cs" />
+    <Compile Include="Helper\DbContextHelper.cs" />
+    <Compile Include="Interface\ISys_School_PanelContentRepository.cs" />
+    <Compile Include="Interface\IBasic_DictCodeRepository.cs" />
+    <Compile Include="Interface\IBasic_HobbyRepository.cs" />
+    <Compile Include="Interface\IBasic_ClassRepository.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfoRepository.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_EducationRepository.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_ExperienceRepository.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_FruitRepository.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_PracticeRepository.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_RewardRepository.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_TrainingRepository.cs" />
+    <Compile Include="Interface\IContent_ArticleRepository.cs" />
+    <Compile Include="Interface\IContent_CategoryRepository.cs" />
+    <Compile Include="Interface\ISys_MenuRepository.cs" />
+    <Compile Include="Interface\ISys_PushMessageRepository.cs" />
+    <Compile Include="Interface\ISys_RoleMenuOperationRepository.cs" />
+    <Compile Include="Interface\ISys_RoleMenuRepository.cs" />
+    <Compile Include="Interface\ISys_RoleRepository.cs" />
+    <Compile Include="Interface\ISys_RoleUserRepository.cs" />
+    <Compile Include="Interface\ISys_ThemeRepository.cs" />
+    <Compile Include="Interface\IVenuSoft_Message_NotFullRemindRepository.cs" />
+    <Compile Include="Interface\ISys_ConfigRepository.cs" />
+    <Compile Include="Interface\IMessage_SchoolKeysRepository.cs" />
+    <Compile Include="Interface\ISys_SMSDetailLogRepository.cs" />
+    <Compile Include="Interface\ISys_OtherSysInterfaceAddrRepository.cs" />
+    <Compile Include="Interface\IBasic_GroupRepository.cs" />
+    <Compile Include="Interface\IBasic_NewsRepository.cs" />
+    <Compile Include="Interface\IBasic_OrganizeRepository.cs" />
+    <Compile Include="Interface\IBasic_NoticeRepository.cs" />
+    <Compile Include="Interface\IMessage_RegisterMobileRepository.cs" />
+    <Compile Include="Interface\IBasic_StudentRepository.cs" />
+    <Compile Include="Interface\IBasic_NewsCategoryRepository.cs" />
+    <Compile Include="Interface\ISys_UserRepository.cs" />
+    <Compile Include="Interface\ISys_FeatureRepository.cs" />
+    <Compile Include="Interface\IBasic_TelephoneDirectoryRepository.cs" />
+    <Compile Include="Interface\IBasic_SpecialtyRepository.cs" />
+    <Compile Include="Interface\ISys_School_ExtendRepository.cs" />
+    <Compile Include="Interface\IBasic_CampusRepository.cs" />
+    <Compile Include="Interface\ISys_SchoolRepository.cs" />
+    <Compile Include="Interface\ICommonRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Sys_School_PanelContentRepository.cs" />
+    <Compile Include="Repository\Basic_DictCodeRepository.cs" />
+    <Compile Include="Repository\Basic_HobbyRepository.cs" />
+    <Compile Include="Repository\Basic_ClassRepository.cs" />
+    <Compile Include="Repository\Basic_TeachaerInfoRepository.cs" />
+    <Compile Include="Repository\Basic_TeacherInfo_EducationRepository.cs" />
+    <Compile Include="Repository\Basic_TeacherInfo_ExperienceRepository.cs" />
+    <Compile Include="Repository\Basic_TeacherInfo_FruitRepository.cs" />
+    <Compile Include="Repository\Basic_TeacherInfo_PracticeRepository.cs" />
+    <Compile Include="Repository\Basic_TeacherInfo_RewardRepository.cs" />
+    <Compile Include="Repository\Basic_TeacherInfo_TrainingRepository.cs" />
+    <Compile Include="Repository\Content_ArticleRepository.cs" />
+    <Compile Include="Repository\Content_CategoryRepository.cs" />
+    <Compile Include="Repository\Sys_MenuRepository.cs" />
+    <Compile Include="Repository\Sys_PushMessageRepository.cs" />
+    <Compile Include="Repository\Sys_RoleMenuOperationRepository.cs" />
+    <Compile Include="Repository\Sys_RoleMenuRepository.cs" />
+    <Compile Include="Repository\Sys_RoleRepository.cs" />
+    <Compile Include="Repository\Sys_RoleUserRepository.cs" />
+    <Compile Include="Repository\Sys_ThemeRepository.cs" />
+    <Compile Include="Repository\VenuSoft_Message_NotFullRemindRepository.cs" />
+    <Compile Include="Repository\Sys_ConfigRepository.cs" />
+    <Compile Include="Repository\Message_SchoolKeysRepository.cs" />
+    <Compile Include="Repository\Sys_SMSDetailLogRepository.cs" />
+    <Compile Include="Repository\Sys_OtherSysInterfaceAddrRepository.cs" />
+    <Compile Include="Repository\Basic_GroupRepository.cs" />
+    <Compile Include="Repository\Basic_NewsRepository.cs" />
+    <Compile Include="Repository\Basic_OrganizeRepository.cs" />
+    <Compile Include="Repository\Basic_NoticeRepository.cs" />
+    <Compile Include="Repository\Message_RegisterMobileRepository.cs" />
+    <Compile Include="Repository\Basic_StudentRepository.cs" />
+    <Compile Include="Repository\Basic_NewsCategoryRepository.cs" />
+    <Compile Include="Repository\Sys_UserRepository.cs" />
+    <Compile Include="Repository\Sys_FeatureRepository.cs" />
+    <Compile Include="Repository\Basic_TelephoneDirectoryRepository.cs" />
+    <Compile Include="Repository\Basic_SpecialtyRepository.cs" />
+    <Compile Include="Repository\Sys_School_ExtendRepository.cs" />
+    <Compile Include="Repository\Basic_CampusRepository.cs" />
+    <Compile Include="Repository\Sys_SchoolRepository.cs" />
+    <Compile Include="Repository\CommonRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{84925d15-4146-464f-80cc-be12fa790c63}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

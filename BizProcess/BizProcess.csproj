@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A9836A2-1EE3-4861-B745-7ECD15EC5146}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BizProcess</RootNamespace>
+    <AssemblyName>BizProcess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aliyun.OSS">
+      <HintPath>..\Libs\Aliyun.OSS.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OurHelper">
+      <HintPath>..\Libs\OurHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\Libs\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="XinGePushSDK.NET">
+      <HintPath>..\Libs\XinGePushSDK.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Interface\IBaseService.cs" />
+    <Compile Include="Base\Service\BaseService.cs" />
+    <Compile Include="Common\Aliyun\OssHelper.cs" />
+    <Compile Include="Common\Validate\ValidateHelper.cs" />
+    <Compile Include="Interface\ISys_School_PanelContentService.cs" />
+    <Compile Include="Interface\IBasic_DictCodeService.cs" />
+    <Compile Include="Interface\IBasic_HobbyService.cs" />
+    <Compile Include="Interface\IBasic_ClassService.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_EducationService.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_ExperienceService.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_FruitService.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_PracticeService.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_RewardService.cs" />
+    <Compile Include="Interface\IBasic_TeacherInfo_TrainingService.cs" />
+    <Compile Include="Interface\IBasic_TeacherManagerService.cs" />
+    <Compile Include="Interface\IContent_ArticleService.cs" />
+    <Compile Include="Interface\IContent_CategoryService.cs" />
+    <Compile Include="Interface\ISys_MenuService.cs" />
+    <Compile Include="Interface\ISys_RoleService.cs" />
+    <Compile Include="Interface\ISys_ThemeService.cs" />
+    <Compile Include="Interface\ISys_PushMessageService.cs" />
+    <Compile Include="Interface\IVenuSoft_Message_NotFullRemindService.cs" />
+    <Compile Include="Interface\ISys_ConfigService.cs" />
+    <Compile Include="Interface\IMessage_SchoolKeysService.cs" />
+    <Compile Include="Interface\ISys_SMSDetailLogService.cs" />
+    <Compile Include="Interface\ISendSMSMessageService.cs" />
+    <Compile Include="Interface\ISys_OtherSysInterfaceAddrService.cs" />
+    <Compile Include="Interface\IBasic_NewsService.cs" />
+    <Compile Include="Interface\IBasic_NoticeService.cs" />
+    <Compile Include="Interface\IMessageService.cs" />
+    <Compile Include="Interface\IBasic_StudentService.cs" />
+    <Compile Include="Interface\IBasic_NewsCategoryService.cs" />
+    <Compile Include="Interface\ISMSService.cs" />
+    <Compile Include="Interface\ISys_UserService.cs" />
+    <Compile Include="Interface\ISys_FeatureService.cs" />
+    <Compile Include="Interface\IBasic_TelephoneDirectoryService.cs" />
+    <Compile Include="Interface\IBasic_SpecialtyService.cs" />
+    <Compile Include="Interface\ISys_School_ExtendService.cs" />
+    <Compile Include="Interface\IBasic_CampusService.cs" />
+    <Compile Include="Interface\ISys_SchoolService.cs" />
+    <Compile Include="Interface\ICommonService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Sys_School_PanelContentService.cs" />
+    <Compile Include="Service\Basic_DictCodeService.cs" />
+    <Compile Include="Service\Basic_HobbyService.cs" />
+    <Compile Include="Service\Basic_ClassService.cs" />
+    <Compile Include="Service\Basic_TeacherInfo_EducationService.cs" />
+    <Compile Include="Service\Basic_TeacherInfo_ExperienceService.cs" />
+    <Compile Include="Service\Basic_TeacherInfo_FruitService.cs" />
+    <Compile Include="Service\Basic_TeacherInfo_PracticeService.cs" />
+    <Compile Include="Service\Basic_TeacherInfo_RewardService.cs" />
+    <Compile Include="Service\Basic_TeacherInfo_TrainingService.cs" />
+    <Compile Include="Service\Basic_TeacherManagerService.cs" />
+    <Compile Include="Service\Content_ArticleService.cs" />
+    <Compile Include="Service\Content_CategoryService.cs" />
+    <Compile Include="Service\Sys_MenuService.cs" />
+    <Compile Include="Service\Sys_RoleService.cs" />
+    <Compile Include="Service\Sys_ThemeService.cs" />
+    <Compile Include="Service\Sys_PushMessageService.cs" />
+    <Compile Include="Service\VenuSoft_Message_NotFullRemindService.cs" />
+    <Compile Include="Service\Sys_ConfigService.cs" />
+    <Compile Include="Service\Message_SchoolKeysService.cs" />
+    <Compile Include="Service\Sys_SMSDetailLogService.cs" />
+    <Compile Include="Service\SendSMSMessageService.cs" />
+    <Compile Include="Service\Sys_OtherSysInterfaceAddrService.cs" />
+    <Compile Include="Service\Basic_NewsService.cs" />
+    <Compile Include="Service\MessageService.cs" />
+    <Compile Include="Service\Basic_StudentService.cs" />
+    <Compile Include="Service\Basic_NoticeService.cs" />
+    <Compile Include="Service\Basic_NewsCategoryService.cs" />
+    <Compile Include="Service\SMSService.cs" />
+    <Compile Include="Service\Sys_UserService.cs" />
+    <Compile Include="Service\Sys_FeatureService.cs" />
+    <Compile Include="Service\Basic_TelephoneDirectoryService.cs" />
+    <Compile Include="Service\Basic_SpecialtyService.cs" />
+    <Compile Include="Service\Sys_School_ExtendService.cs" />
+    <Compile Include="Service\Basic_CampusService.cs" />
+    <Compile Include="Service\Sys_SchoolService.cs" />
+    <Compile Include="Service\CommonService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{156c67a3-aff5-410d-9c61-e94b7db8a255}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{84925d15-4146-464f-80cc-be12fa790c63}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Common\Validate\ValidateHelper.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,10 @@
+﻿ #div_distributed,#div_undistribut{
+     width:100%;
+ }
+  #div_distributed img,#div_undistribut img{
+      margin-left: 20px;
+      margin-top:15px;
+  }
+    #div_distributed p,#div_undistribut p{
+    font-size:14px;
+  }

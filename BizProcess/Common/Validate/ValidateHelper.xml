@@ -1,0 +1,73 @@
+﻿<Tables>
+  <Basic_Campus>
+    <Column ColName='CampusName' Dis='校区名称' MustNoExists='{"TableName":"dbo.Basic_Campus","InsertWhere":" and CampusName=#CampusName#","UpdateWhere":"  and CampusName=#CampusName# and CampusID!=#CampusID#  "}' MustNoExistsMessage="校区名称已存在请更换" Regular='^[\u4e00-\u9fa5\w]{1,50}$' RegularErrorMessage='校区名称必须为长度为1-50 的字母,数字,下划线或者为中文'  IsNotNull='true'  IsNotNullMessage='校区名称不能为空'/>
+  </Basic_Campus>
+  <Sys_User>
+    <Column ColName='LoginID' Dis='登录名' MustNoExists='{"TableName":"dbo.Sys_User","InsertWhere":" and LoginID=#LoginID#","UpdateWhere":"  and LoginID=#LoginID# and ID!=#ID#  "}' MustNoExistsMessage="登录名已存在请更换" Regular='^[\u4e00-\u9fa5\w]{1,50}$' RegularErrorMessage='登录名必须为长度为1-50 的字母,数字,下划线或者为中文'  IsNotNull='true'  IsNotNullMessage='登录名不能为空'/>
+    <Column ColName='UserAccount' Dis='职工号' MustNoExists='{"TableName":"dbo.Sys_User","InsertWhere":" and SchoolID=#SchoolID# and UserAccount=#UserAccount#","UpdateWhere":" and SchoolID=#SchoolID# and UserAccount=#UserAccount# and  ID!=#ID#  "}' MustNoExistsMessage="用户帐号已存在请更换" Regular='^[\u4e00-\u9fa5\w]{1,50}$' RegularErrorMessage='用户帐号必须为长度为1-50 的字母,数字,下划线或者为中文'  IsNotNull='true'  IsNotNullMessage='用户帐号不能为空'/>
+    <Column ColName='MobileNumber' Dis='手机号' MustNoExists='{"TableName":"dbo.Sys_User","InsertWhere":" and MobileNumber=#MobileNumber#  ","UpdateWhere":"  and MobileNumber=#MobileNumber# and  ID!=#ID#  "}' MustNoExistsMessage="手机号已存在请更换" Regular='\d{0,11}$' RegularErrorMessage='手机号格式不正确'  IsNotNull='true'  IsNotNullMessage='手机号不能为空'/>
+    <Column ColName='Email' Dis='手机号' MustNoExists='{"TableName":"dbo.Sys_User","InsertWhere":" and Email=#Email#  ","UpdateWhere":"  and Email=#Email# and  ID!=#ID#  "}' />
+
+    
+  </Sys_User>
+  <Content_Article>
+    <Column ColName='Title' Dis='标题' IsNotNull='true'  IsNotNullMessage='标题不能为空'/>
+    <Column ColName='CategoryID' Dis='所属栏目' IsNotNull='true'  IsNotNullMessage='所属栏目不能为空'/>
+    <Column ColName='BrowseCount' Dis='浏览数'  Regular='^\d{1,5}$' RegularErrorMessage='浏览数格式错误'  IsNotNull='true'  IsNotNullMessage='浏览数不能为空'/>
+    <Column ColName='Digest' Dis='内容摘要'  Regular='^[\s\S]{0,50}$' RegularErrorMessage='内容摘要必须为长度为0-50 的字母,数字,下划线或者为中文'   />
+
+    <Column ColName='DisplayIndex' Dis='显示顺序' Regular='^\d{1,5}$' RegularErrorMessage='显示顺序格式错误'  IsNotNull='true'  IsNotNullMessage='显示顺序不能为空'/>
+  </Content_Article>
+  <Basic_TeacherInfo>
+    <Column ColName='Name' Dis='姓名' Regular='^[\u4e00-\u9fa5\w]{1,50}$' RegularErrorMessage='姓名必须为长度为1-50 的字母,数字,下划线或者为中文'  IsNotNull='true'  IsNotNullMessage='姓名不能为空'/>
+    <Column ColName='EmployeeID' Dis='职工号' Regular='^[\u4e00-\u9fa5\w]{1,50}$' RegularErrorMessage='职工号必须为长度为1-50 的字母,数字,下划线或者为中文'  IsNotNull='true'  IsNotNullMessage='请输入职工号' />
+
+    <Column ColName='Sex' Dis='性别'   IsNotNull='true'  IsNotNullMessage='请选择性别'/>
+    <Column ColName='Birthday' Dis='出生日期'   IsNotNull='true'  IsNotNullMessage='请输入出生日期' Regular="^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2}) (\d{1,2}):(\d{1,2}):(\d{1,2})(([\.]\d{0,3})?)$|^$" RegularErrorMessage="出生日期格式不正确"/>
+    <Column ColName='Age' Dis='年龄'   IsNotNull='true'  IsNotNullMessage='请输入年龄' Regular="^\d{0,5}$" RegularErrorMessage="年龄格式不正确"/>
+    
+    <Column ColName='WorkYears' Dis='工作年限'  Regular="^\d{0,5}$" RegularErrorMessage="工作年限格式不正确"/>
+    <Column ColName='ManagerYears' Dis='班主任年限' Regular="^\d{0,5}$" RegularErrorMessage="班主任年限格式不正确"/>
+
+
+  </Basic_TeacherInfo>
+  <Basic_TeacherInfo_Fruit>
+    <Column ColName='Name' Dis='教科研成果'   IsNotNull='true'  IsNotNullMessage='请输入教科研成果'/>
+    <Column ColName='FruitLevel' Dis='级别'   IsNotNull='true'  IsNotNullMessage='请输入级别'/>
+    <Column ColName='GetDate' Dis='时间'   IsNotNull='true'  IsNotNullMessage='请输入时间'/>
+  </Basic_TeacherInfo_Fruit>
+  <Basic_TeacherInfo_Training>
+    <Column ColName='Name' Dis='培训项目'   IsNotNull='true'  IsNotNullMessage='请输入培训项目'/>
+    <Column ColName='Organization' Dis='培训机构'   IsNotNull='true'  IsNotNullMessage='请输入培训机构'/>
+    <Column ColName='TrainingType' Dis='培训性质'   IsNotNull='true'  IsNotNullMessage='请输入培训性质'/>
+    <Column ColName='BeginDate' Dis='开始时间'   IsNotNull='true'  IsNotNullMessage='请输入开始时间'/>
+    <Column ColName='EndDate' Dis='结束时间'   IsNotNull='true'  IsNotNullMessage='请输入结束时间'/>
+  </Basic_TeacherInfo_Training>
+  <Basic_TeacherInfo_Reward>
+    <Column ColName='Name' Dis='获奖项目'   IsNotNull='true'  IsNotNullMessage='请输入获奖项目'/>
+    <Column ColName='RewardLevel' Dis='奖励级别'   IsNotNull='true'  IsNotNullMessage='请输入奖励级别'/>
+    <Column ColName='RewardName' Dis='奖励名称'   IsNotNull='true'  IsNotNullMessage='请输入奖励名称'/>
+    <Column ColName='GetDate' Dis='颁奖日期'   IsNotNull='true'  IsNotNullMessage='请输入颁奖日期'/>
+  </Basic_TeacherInfo_Reward>
+  <Basic_TeacherInfo_Education>
+    <Column ColName='Name' Dis='学历'   IsNotNull='true'  IsNotNullMessage='请输入学历'/>
+    <Column ColName='BeginDate' Dis='开始时间'   IsNotNull='true'  IsNotNullMessage='请输入开始时间'/>
+    <Column ColName='SchoolName' Dis='进修学校'   IsNotNull='true'  IsNotNullMessage='请输入进修学校'/>
+    <Column ColName='SpecialtyName' Dis='所修专业'   IsNotNull='true'  IsNotNullMessage='请输入所修专业'/>
+  </Basic_TeacherInfo_Education>
+  <Basic_TeacherInfo_Practice>
+    <Column ColName='CompanyName' Dis='企业名称'   IsNotNull='true'  IsNotNullMessage='请输入企业名称'/>
+    <Column ColName='BeginDate' Dis='开始时间'   IsNotNull='true'  IsNotNullMessage='请输入开始时间'/>
+    <Column ColName='EndDate' Dis='结束时间'   IsNotNull='true'  IsNotNullMessage='请输入结束时间'/>
+    <Column ColName='WorkingDays' Dis='工作日天数'    Regular="^\d{0,5}$" RegularErrorMessage="工作日天数格式不正确"/>
+    <Column ColName='NotWorkingDays' Dis='非工作日天数'    Regular="^\d{0,5}$" RegularErrorMessage="非工作日天数格式不正确" />
+
+  </Basic_TeacherInfo_Practice>
+  <Basic_TeacherInfo_Experience>
+    <Column ColName='WorkType' Dis='工作类型'   IsNotNull='true'  IsNotNullMessage='请输入工作类型'/>
+    <Column ColName='BeginDate' Dis='开始时间'   IsNotNull='true'  IsNotNullMessage='请输入开始时间'/>
+    <Column ColName='EndDate' Dis='结束时间'   IsNotNull='true'  IsNotNullMessage='请输入结束时间'/>
+    <Column ColName='CompanyName' Dis='工作单位'   IsNotNull='true'  IsNotNullMessage='请输入工作单位'/>
+    <Column ColName='Industry' Dis='行业'   IsNotNull='true'  IsNotNullMessage='请输入行业'/>
+  </Basic_TeacherInfo_Experience>
+</Tables>

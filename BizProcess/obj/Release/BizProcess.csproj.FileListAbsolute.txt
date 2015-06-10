@@ -1,0 +1,16 @@
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\BizProcess.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\BizProcess.pdb
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\DataAccess.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\Entity.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\OurHelper.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\EntityFramework.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\Microsoft.Http.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\DataAccess.pdb
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\Entity.pdb
+E:\workspace\VenuSoft_Cloud\BizProcess\obj\Release\BizProcess.csprojResolveAssemblyReference.cache
+E:\workspace\VenuSoft_Cloud\BizProcess\obj\Release\BizProcess.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\obj\Release\BizProcess.pdb
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\Newtonsoft.Json.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\XinGePushSDK.NET.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\Aliyun.OSS.dll
+E:\workspace\VenuSoft_Cloud\BizProcess\bin\Release\ThoughtWorks.QRCode.dll

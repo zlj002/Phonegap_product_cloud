@@ -1,0 +1,957 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OurSolutionModelStoreContainer" CdmEntityContainer="OurSolutionEntities">
+    <EntitySetMapping Name="Basic_Campus">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Campus">
+        <MappingFragment StoreEntitySet="Basic_Campus">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="CampusCoords" ColumnName="CampusCoords" />
+          <ScalarProperty Name="CampusName" ColumnName="CampusName" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="CampusID" ColumnName="CampusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_Device">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Device">
+        <MappingFragment StoreEntitySet="Basic_Device">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="PlatformVersion" ColumnName="PlatformVersion" />
+          <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="RegistTime" ColumnName="RegistTime" />
+          <ScalarProperty Name="DeviceUUID" ColumnName="DeviceUUID" />
+          <ScalarProperty Name="UserNO" ColumnName="UserNO" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_DeviceToken">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_DeviceToken">
+        <MappingFragment StoreEntitySet="Basic_DeviceToken">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="IOSDeviceToken" ColumnName="IOSDeviceToken" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_Notice">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Notice">
+        <MappingFragment StoreEntitySet="Basic_Notice">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreatTime" ColumnName="CreatTime" />
+          <ScalarProperty Name="SendContent" ColumnName="SendContent" />
+          <ScalarProperty Name="SendUserID" ColumnName="SendUserID" />
+          <ScalarProperty Name="SendRange" ColumnName="SendRange" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_NoticeUser_Relationship">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_NoticeUser_Relationship">
+        <MappingFragment StoreEntitySet="Basic_NoticeUser_Relationship">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="NoticeID" ColumnName="NoticeID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Log">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_Log">
+        <MappingFragment StoreEntitySet="Sys_Log">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="OperationStatus" ColumnName="OperationStatus" />
+          <ScalarProperty Name="FeatureID" ColumnName="FeatureID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_Group">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Group">
+        <MappingFragment StoreEntitySet="Basic_Group">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="OrderIndex" ColumnName="OrderIndex" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_GroupUser_Relationship">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_GroupUser_Relationship">
+        <MappingFragment StoreEntitySet="Basic_GroupUser_Relationship">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_Organize">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Organize">
+        <MappingFragment StoreEntitySet="Basic_Organize">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="OrderIndex" ColumnName="OrderIndex" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_OrganizeUser_Relationship">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_OrganizeUser_Relationship">
+        <MappingFragment StoreEntitySet="Basic_OrganizeUser_Relationship">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OrganizeID" ColumnName="OrganizeID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Feature">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_Feature">
+        <MappingFragment StoreEntitySet="Sys_Feature">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="FeatureType" ColumnName="FeatureType" />
+          <ScalarProperty Name="FeatureUrl" ColumnName="FeatureUrl" />
+          <ScalarProperty Name="FeatureIcon" ColumnName="FeatureIcon" />
+          <ScalarProperty Name="FeatureName" ColumnName="FeatureName" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="FeatureID" ColumnName="FeatureID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Feature_Authority">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_Feature_Authority">
+        <MappingFragment StoreEntitySet="Sys_Feature_Authority">
+          <ScalarProperty Name="TargetType" ColumnName="TargetType" />
+          <ScalarProperty Name="TargetID" ColumnName="TargetID" />
+          <ScalarProperty Name="FeatureID" ColumnName="FeatureID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_School">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_School">
+        <MappingFragment StoreEntitySet="Sys_School">
+          <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="WebSiteUrl" ColumnName="WebSiteUrl" />
+          <ScalarProperty Name="LogoUrl" ColumnName="LogoUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_School_Extend">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_School_Extend">
+        <MappingFragment StoreEntitySet="Sys_School_Extend">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Honor" ColumnName="Honor" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_User">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_User">
+        <MappingFragment StoreEntitySet="Sys_User">
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="HeaderImage" ColumnName="HeaderImage" />
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="UserAccount" ColumnName="UserAccount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_TelephoneDirectory">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_TelephoneDirectory">
+        <MappingFragment StoreEntitySet="Basic_TelephoneDirectory">
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="ExtNumber" ColumnName="ExtNumber" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_NewsCategory">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_NewsCategory">
+        <MappingFragment StoreEntitySet="Basic_NewsCategory">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_Attachment">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Attachment">
+        <MappingFragment StoreEntitySet="Basic_Attachment">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileOrcName" ColumnName="FileOrcName" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="TargetID" ColumnName="TargetID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Message_RegisterMobile">
+      <EntityTypeMapping TypeName="OurSolutionModel.Message_RegisterMobile">
+        <MappingFragment StoreEntitySet="Message_RegisterMobile">
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="IsVerify" ColumnName="IsVerify" />
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="GenerateTime" ColumnName="GenerateTime" />
+          <ScalarProperty Name="MessageCode" ColumnName="MessageCode" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_Class">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Class">
+        <MappingFragment StoreEntitySet="Basic_Class">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_Specialty">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Specialty">
+        <MappingFragment StoreEntitySet="Basic_Specialty">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_Student">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Student">
+        <MappingFragment StoreEntitySet="Basic_Student">
+          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+          <ScalarProperty Name="Dormitory" ColumnName="Dormitory" />
+          <ScalarProperty Name="PersonalSign" ColumnName="PersonalSign" />
+          <ScalarProperty Name="ILike" ColumnName="ILike" />
+          <ScalarProperty Name="RecentActivities" ColumnName="RecentActivities" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="XH" ColumnName="XH" />
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="StartYear" ColumnName="StartYear" />
+          <ScalarProperty Name="SpecialtyID" ColumnName="SpecialtyID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_News">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_News">
+        <MappingFragment StoreEntitySet="Basic_News">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="IsCategoryTop" ColumnName="IsCategoryTop" />
+          <ScalarProperty Name="IsMainDisplay" ColumnName="IsMainDisplay" />
+          <ScalarProperty Name="ContentBody" ColumnName="ContentBody" />
+          <ScalarProperty Name="Abstract" ColumnName="Abstract" />
+          <ScalarProperty Name="PublishTime" ColumnName="PublishTime" />
+          <ScalarProperty Name="BrowseCount" ColumnName="BrowseCount" />
+          <ScalarProperty Name="PreviewImage" ColumnName="PreviewImage" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="DisplayType" ColumnName="DisplayType" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Message_SchoolKeys">
+      <EntityTypeMapping TypeName="OurSolutionModel.Message_SchoolKeys">
+        <MappingFragment StoreEntitySet="Message_SchoolKeys">
+          <ScalarProperty Name="SchoolKey" ColumnName="SchoolKey" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_OtherSysInterfaceAddr">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_OtherSysInterfaceAddr">
+        <MappingFragment StoreEntitySet="Sys_OtherSysInterfaceAddr">
+          <ScalarProperty Name="DataWebServiceMethod" ColumnName="DataWebServiceMethod" />
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_SMSDetailLog">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_SMSDetailLog">
+        <MappingFragment StoreEntitySet="Sys_SMSDetailLog">
+          <ScalarProperty Name="MessageContent" ColumnName="MessageContent" />
+          <ScalarProperty Name="ReceiveUserMobile" ColumnName="ReceiveUserMobile" />
+          <ScalarProperty Name="SenderUserID" ColumnName="SenderUserID" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReturnMessage" ColumnName="ReturnMessage" />
+          <ScalarProperty Name="ReceiveUserName" ColumnName="ReceiveUserName" />
+          <ScalarProperty Name="SMSLogID" ColumnName="SMSLogID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Config">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_Config">
+        <MappingFragment StoreEntitySet="Sys_Config">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VenuSoft_Message_NotFullRemind">
+      <EntityTypeMapping TypeName="OurSolutionModel.VenuSoft_Message_NotFullRemind">
+        <MappingFragment StoreEntitySet="VenuSoft_Message_NotFullRemind">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VenuSoft_User">
+      <EntityTypeMapping TypeName="OurSolutionModel.VenuSoft_User">
+        <MappingFragment StoreEntitySet="VenuSoft_User">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Theme">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_Theme">
+        <MappingFragment StoreEntitySet="Sys_Theme">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CssUrl" ColumnName="CssUrl" />
+          <ScalarProperty Name="PreViewImage" ColumnName="PreViewImage" />
+          <ScalarProperty Name="ThemeName" ColumnName="ThemeName" />
+          <ScalarProperty Name="ThemeID" ColumnName="ThemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Sys_SchoolTheme_Relationship" TypeName="OurSolutionModel.Sys_SchoolTheme_Relationship" StoreEntitySet="Sys_SchoolTheme_Relationship">
+      <EndProperty Name="Sys_Theme">
+        <ScalarProperty Name="ThemeID" ColumnName="ThemeID" />
+      </EndProperty>
+      <EndProperty Name="Sys_School">
+        <ScalarProperty Name="ID" ColumnName="SchoolID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Sys_PushMessage">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_PushMessage">
+        <MappingFragment StoreEntitySet="Sys_PushMessage">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FeatureID" ColumnName="FeatureID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PushID" ColumnName="PushID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Content_Article">
+      <EntityTypeMapping TypeName="OurSolutionModel.Content_Article">
+        <MappingFragment StoreEntitySet="Content_Article">
+          <ScalarProperty Name="CoverImageThumbnailSquare" ColumnName="CoverImageThumbnailSquare" />
+          <ScalarProperty Name="CoverImageThumbnailRect" ColumnName="CoverImageThumbnailRect" />
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="IsCategoryTop" ColumnName="IsCategoryTop" />
+          <ScalarProperty Name="IsMainDisplay" ColumnName="IsMainDisplay" />
+          <ScalarProperty Name="ArticleContent" ColumnName="ArticleContent" />
+          <ScalarProperty Name="PublishTime" ColumnName="PublishTime" />
+          <ScalarProperty Name="SourceUrl" ColumnName="SourceUrl" />
+          <ScalarProperty Name="Digest" ColumnName="Digest" />
+          <ScalarProperty Name="BrowseCount" ColumnName="BrowseCount" />
+          <ScalarProperty Name="CoverImage" ColumnName="CoverImage" />
+          <ScalarProperty Name="RecommendType" ColumnName="RecommendType" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Content_ArticleSlide">
+      <EntityTypeMapping TypeName="OurSolutionModel.Content_ArticleSlide">
+        <MappingFragment StoreEntitySet="Content_ArticleSlide">
+          <ScalarProperty Name="SlideFileSize" ColumnName="SlideFileSize" />
+          <ScalarProperty Name="SlideTitle" ColumnName="SlideTitle" />
+          <ScalarProperty Name="SlideImageUrl" ColumnName="SlideImageUrl" />
+          <ScalarProperty Name="SlideFileName" ColumnName="SlideFileName" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="SlideID" ColumnName="SlideID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Content_Category">
+      <EntityTypeMapping TypeName="OurSolutionModel.Content_Category">
+        <MappingFragment StoreEntitySet="Content_Category">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ContentIcon" ColumnName="ContentIcon" />
+          <ScalarProperty Name="ContentPath" ColumnName="ContentPath" />
+          <ScalarProperty Name="ContentLevel" ColumnName="ContentLevel" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Role">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_Role">
+        <MappingFragment StoreEntitySet="Sys_Role">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="IsLockUser" ColumnName="IsLockUser" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Sys_RoleUser" TypeName="OurSolutionModel.Sys_RoleUser" StoreEntitySet="Sys_RoleUser">
+      <EndProperty Name="Sys_User">
+        <ScalarProperty Name="ID" ColumnName="UserID" />
+      </EndProperty>
+      <EndProperty Name="Sys_Role">
+        <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Sys_Menu">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_Menu">
+        <MappingFragment StoreEntitySet="Sys_Menu">
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="ParentMenuID" ColumnName="ParentMenuID" />
+          <ScalarProperty Name="MenuIconImageUrl" ColumnName="MenuIconImageUrl" />
+          <ScalarProperty Name="MenuIconClass" ColumnName="MenuIconClass" />
+          <ScalarProperty Name="MenuUrl" ColumnName="MenuUrl" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_Operation">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_Operation">
+        <MappingFragment StoreEntitySet="Sys_Operation">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="OperationImageUrl" ColumnName="OperationImageUrl" />
+          <ScalarProperty Name="OperationClass" ColumnName="OperationClass" />
+          <ScalarProperty Name="OperationName" ColumnName="OperationName" />
+          <ScalarProperty Name="OperationID" ColumnName="OperationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_RoleMenuOperation">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_RoleMenuOperation">
+        <MappingFragment StoreEntitySet="Sys_RoleMenuOperation">
+          <ScalarProperty Name="OperationID" ColumnName="OperationID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Sys_MenuOperation" TypeName="OurSolutionModel.Sys_MenuOperation" StoreEntitySet="Sys_MenuOperation">
+      <EndProperty Name="Sys_Operation">
+        <ScalarProperty Name="OperationID" ColumnName="OperationID" />
+      </EndProperty>
+      <EndProperty Name="Sys_Menu">
+        <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Sys_RoleMenu" TypeName="OurSolutionModel.Sys_RoleMenu" StoreEntitySet="Sys_RoleMenu">
+      <EndProperty Name="Sys_Role">
+        <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+      </EndProperty>
+      <EndProperty Name="Sys_Menu">
+        <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Basic_TeacherInfo">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_TeacherInfo">
+        <MappingFragment StoreEntitySet="Basic_TeacherInfo">
+          <ScalarProperty Name="PersonalSign" ColumnName="PersonalSign" />
+          <ScalarProperty Name="ILike" ColumnName="ILike" />
+          <ScalarProperty Name="RecentActivities" ColumnName="RecentActivities" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Forte" ColumnName="Forte" />
+          <ScalarProperty Name="IsManager" ColumnName="IsManager" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="GetDate5" ColumnName="GetDate5" />
+          <ScalarProperty Name="Level5" ColumnName="Level5" />
+          <ScalarProperty Name="Certificate5" ColumnName="Certificate5" />
+          <ScalarProperty Name="GetDate4" ColumnName="GetDate4" />
+          <ScalarProperty Name="Level4" ColumnName="Level4" />
+          <ScalarProperty Name="Certificate4" ColumnName="Certificate4" />
+          <ScalarProperty Name="ManagerYears" ColumnName="ManagerYears" />
+          <ScalarProperty Name="WorkYears" ColumnName="WorkYears" />
+          <ScalarProperty Name="TechnicalGetDate" ColumnName="TechnicalGetDate" />
+          <ScalarProperty Name="TechnicalTitle" ColumnName="TechnicalTitle" />
+          <ScalarProperty Name="GetDate3" ColumnName="GetDate3" />
+          <ScalarProperty Name="Level3" ColumnName="Level3" />
+          <ScalarProperty Name="Certificate3" ColumnName="Certificate3" />
+          <ScalarProperty Name="GetDate2" ColumnName="GetDate2" />
+          <ScalarProperty Name="Level2" ColumnName="Level2" />
+          <ScalarProperty Name="Certificate2" ColumnName="Certificate2" />
+          <ScalarProperty Name="GetDate1" ColumnName="GetDate1" />
+          <ScalarProperty Name="Level1" ColumnName="Level1" />
+          <ScalarProperty Name="Certificate1" ColumnName="Certificate1" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="TeachSpecialty" ColumnName="TeachSpecialty" />
+          <ScalarProperty Name="SecondExtent" ColumnName="SecondExtent" />
+          <ScalarProperty Name="SecondLanguage" ColumnName="SecondLanguage" />
+          <ScalarProperty Name="FirstExtent" ColumnName="FirstExtent" />
+          <ScalarProperty Name="FirstLanguage" ColumnName="FirstLanguage" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="TeacherProperty" ColumnName="TeacherProperty" />
+          <ScalarProperty Name="TeachingType" ColumnName="TeachingType" />
+          <ScalarProperty Name="JobType" ColumnName="JobType" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+          <ScalarProperty Name="PostalAddress" ColumnName="PostalAddress" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Healthy" ColumnName="Healthy" />
+          <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+          <ScalarProperty Name="Political" ColumnName="Political" />
+          <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+          <ScalarProperty Name="Ethnic" ColumnName="Ethnic" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_TeacherInfo_Education">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_TeacherInfo_Education">
+        <MappingFragment StoreEntitySet="Basic_TeacherInfo_Education">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="SpecialtyName" ColumnName="SpecialtyName" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_TeacherInfo_Experience">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_TeacherInfo_Experience">
+        <MappingFragment StoreEntitySet="Basic_TeacherInfo_Experience">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="WorkType" ColumnName="WorkType" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_TeacherInfo_Fruit">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_TeacherInfo_Fruit">
+        <MappingFragment StoreEntitySet="Basic_TeacherInfo_Fruit">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="GetDate" ColumnName="GetDate" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="FruitLevel" ColumnName="FruitLevel" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_TeacherInfo_Practice">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_TeacherInfo_Practice">
+        <MappingFragment StoreEntitySet="Basic_TeacherInfo_Practice">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Achievement" ColumnName="Achievement" />
+          <ScalarProperty Name="PracticeContent" ColumnName="PracticeContent" />
+          <ScalarProperty Name="NotWorkingDays" ColumnName="NotWorkingDays" />
+          <ScalarProperty Name="WorkingDays" ColumnName="WorkingDays" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_TeacherInfo_Reward">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_TeacherInfo_Reward">
+        <MappingFragment StoreEntitySet="Basic_TeacherInfo_Reward">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="GetDate" ColumnName="GetDate" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="RewardName" ColumnName="RewardName" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="RewardType" ColumnName="RewardType" />
+          <ScalarProperty Name="RewardLevel" ColumnName="RewardLevel" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_TeacherInfo_Training">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_TeacherInfo_Training">
+        <MappingFragment StoreEntitySet="Basic_TeacherInfo_Training">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="BeginDate" ColumnName="BeginDate" />
+          <ScalarProperty Name="TrainingType" ColumnName="TrainingType" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_Department">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Department">
+        <MappingFragment StoreEntitySet="Basic_Department">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Basic_DepartmentTeacher" TypeName="OurSolutionModel.Basic_DepartmentTeacher" StoreEntitySet="Basic_DepartmentTeacher">
+      <EndProperty Name="Basic_TeacherInfo">
+        <ScalarProperty Name="ID" ColumnName="TeacherID" />
+      </EndProperty>
+      <EndProperty Name="Basic_Department">
+        <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Basic_Hobby">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_Hobby">
+        <MappingFragment StoreEntitySet="Basic_Hobby">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="HobbyName" ColumnName="HobbyName" />
+          <ScalarProperty Name="HobbyID" ColumnName="HobbyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_DictCode">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_DictCode">
+        <MappingFragment StoreEntitySet="Basic_DictCode">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DictCodeName" ColumnName="DictCodeName" />
+          <ScalarProperty Name="DictCode" ColumnName="DictCode" />
+          <ScalarProperty Name="DictCodeType" ColumnName="DictCodeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basic_DictCodeType">
+      <EntityTypeMapping TypeName="OurSolutionModel.Basic_DictCodeType">
+        <MappingFragment StoreEntitySet="Basic_DictCodeType">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DictCodeTypeName" ColumnName="DictCodeTypeName" />
+          <ScalarProperty Name="DictCodeType" ColumnName="DictCodeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sys_School_PanelContent">
+      <EntityTypeMapping TypeName="OurSolutionModel.Sys_School_PanelContent">
+        <MappingFragment StoreEntitySet="Sys_School_PanelContent">
+          <ScalarProperty Name="DisplayIndex" ColumnName="DisplayIndex" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="HTMLContent" ColumnName="HTMLContent" />
+          <ScalarProperty Name="PanelID" ColumnName="PanelID" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,14 @@
+﻿ul, ol {
+     margin: 10px 0 10px 0px; 
+    padding: 0;
+}
+.transparent_class {
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    z-index: 100;
+    cursor: pointer;
+    width: 80px;
+    height:150px;
+    opacity: 0;
+}

@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84925D15-4146-464F-80CC-BE12FA790C63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entity</RootNamespace>
+    <AssemblyName>Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basic_Attachment.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Campus.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Class.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Department.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Device.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_DeviceToken.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_DictCode.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_DictCodeType.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Group.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_GroupUser_Relationship.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Hobby.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_News.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_NewsCategory.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Notice.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_NoticeUser_Relationship.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Organize.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_OrganizeUser_Relationship.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Specialty.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_Student.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_TeacherInfo.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_TeacherInfo_Education.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_TeacherInfo_Experience.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_TeacherInfo_Fruit.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_TeacherInfo_Practice.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_TeacherInfo_Reward.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_TeacherInfo_Training.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Basic_TelephoneDirectory.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content_Article.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content_ArticleSlide.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Content_Category.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomEntity\ConstantEntity.cs" />
+    <Compile Include="CustomEntity\RtnSMSMessage.cs" />
+    <Compile Include="CustomEntity\SMSMessage.cs" />
+    <Compile Include="CustomEntity\Sys_ContactUsers.cs" />
+    <Compile Include="Extend\Basic_TeachaerInfo.cs" />
+    <Compile Include="Extend\Sys_Menu.cs" />
+    <Compile Include="Extend\Sys_PushMessage.cs" />
+    <Compile Include="Extend\Sys_RoleMenu.cs" />
+    <Compile Include="Extend\Sys_RoleUser.cs" />
+    <Compile Include="Extend\VenuSoft_Message_NotFullRemind.cs" />
+    <Compile Include="Extend\Sys_SMSDetailLog.cs" />
+    <Compile Include="Extend\Basic_Student.cs" />
+    <Compile Include="Extend\Basic_Notice.cs" />
+    <Compile Include="Extend\CommonEntity.cs" />
+    <Compile Include="Extend\EntityMemberAttribute.cs" />
+    <Compile Include="Extend\Sys_User.cs" />
+    <Compile Include="Message_RegisterMobile.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Message_SchoolKeys.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OurSolution.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OurSolution.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OurSolution.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OurSolution.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OurSolution.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sys_Config.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Feature.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Feature_Authority.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Log.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Menu.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Operation.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_OtherSysInterfaceAddr.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_PushMessage.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Role.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_RoleMenuOperation.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_School.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_School_Extend.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_School_PanelContent.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_SMSDetailLog.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Theme.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_User.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VenuSoft_Message_NotFullRemind.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VenuSoft_User.cs">
+      <DependentUpon>OurSolution.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="OurSolution.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OurSolution.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="OurSolution.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OurSolution.edmx</DependentUpon>
+      <LastGenOutput>OurSolution.Context.cs</LastGenOutput>
+    </None>
+    <None Include="OurSolution.edmx.diagram">
+      <DependentUpon>OurSolution.edmx</DependentUpon>
+    </None>
+    <None Include="OurSolution.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OurSolution.edmx</DependentUpon>
+      <LastGenOutput>OurSolution.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataBase\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

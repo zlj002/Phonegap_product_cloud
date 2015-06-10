@@ -1,0 +1,13 @@
+﻿#content {
+    width: 100%;
+}
+
+#left {
+    width: 25%;
+    float: left;
+}
+
+#right {
+    width: 75%;
+    float: left;
+}

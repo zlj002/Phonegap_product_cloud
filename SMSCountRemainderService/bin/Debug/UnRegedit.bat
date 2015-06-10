@@ -1,0 +1,2 @@
+net stop VenuSoft_WinService_SMS
+InstallUtil.exe /u SMSCountRemainderService.exe

@@ -1,0 +1,1737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OurSolutionModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="OurSolutionEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="Basic_Campus" EntityType="OurSolutionModel.Basic_Campus" />
+    <EntitySet Name="Basic_Device" EntityType="OurSolutionModel.Basic_Device" />
+    <EntitySet Name="Basic_DeviceToken" EntityType="OurSolutionModel.Basic_DeviceToken" />
+    <EntitySet Name="Basic_Notice" EntityType="OurSolutionModel.Basic_Notice" />
+    <EntitySet Name="Basic_NoticeUser_Relationship" EntityType="OurSolutionModel.Basic_NoticeUser_Relationship" />
+    <EntitySet Name="Sys_Log" EntityType="OurSolutionModel.Sys_Log" />
+    <EntitySet Name="Basic_Group" EntityType="OurSolutionModel.Basic_Group" />
+    <EntitySet Name="Basic_GroupUser_Relationship" EntityType="OurSolutionModel.Basic_GroupUser_Relationship" />
+    <AssociationSet Name="FK_Basic_GroupUser_Basic_Group" Association="OurSolutionModel.FK_Basic_GroupUser_Basic_Group">
+      <End Role="Basic_Group" EntitySet="Basic_Group" />
+      <End Role="Basic_GroupUser_Relationship" EntitySet="Basic_GroupUser_Relationship" />
+    </AssociationSet>
+    <EntitySet Name="Basic_Organize" EntityType="OurSolutionModel.Basic_Organize" />
+    <EntitySet Name="Basic_OrganizeUser_Relationship" EntityType="OurSolutionModel.Basic_OrganizeUser_Relationship" />
+    <AssociationSet Name="FK_Basic_OrganizeUser_Relationship_Basic_Organize" Association="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Basic_Organize">
+      <End Role="Basic_Organize" EntitySet="Basic_Organize" />
+      <End Role="Basic_OrganizeUser_Relationship" EntitySet="Basic_OrganizeUser_Relationship" />
+    </AssociationSet>
+    <EntitySet Name="Sys_Feature" EntityType="OurSolutionModel.Sys_Feature" />
+    <EntitySet Name="Sys_Feature_Authority" EntityType="OurSolutionModel.Sys_Feature_Authority" />
+    <EntitySet Name="Sys_School" EntityType="OurSolutionModel.Sys_School" />
+    <EntitySet Name="Sys_School_Extend" EntityType="OurSolutionModel.Sys_School_Extend" />
+    <AssociationSet Name="FK_Basic_Campus_Sys_School" Association="OurSolutionModel.FK_Basic_Campus_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Basic_Campus" EntitySet="Basic_Campus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_DeviceToken_Sys_School" Association="OurSolutionModel.FK_Basic_DeviceToken_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Basic_DeviceToken" EntitySet="Basic_DeviceToken" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_Group_Sys_School" Association="OurSolutionModel.FK_Basic_Group_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Basic_Group" EntitySet="Basic_Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_GroupUser_Sys_School" Association="OurSolutionModel.FK_Basic_GroupUser_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Basic_GroupUser_Relationship" EntitySet="Basic_GroupUser_Relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_OrganizeUser_Relationship_Sys_School" Association="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Basic_OrganizeUser_Relationship" EntitySet="Basic_OrganizeUser_Relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_Feature_Authority_Sys_Feature" Association="OurSolutionModel.FK_Sys_Feature_Authority_Sys_Feature">
+      <End Role="Sys_Feature" EntitySet="Sys_Feature" />
+      <End Role="Sys_Feature_Authority" EntitySet="Sys_Feature_Authority" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_Feature_Sys_School" Association="OurSolutionModel.FK_Sys_Feature_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Sys_Feature" EntitySet="Sys_Feature" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_Feature_Authority_Sys_School" Association="OurSolutionModel.FK_Sys_Feature_Authority_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Sys_Feature_Authority" EntitySet="Sys_Feature_Authority" />
+    </AssociationSet>
+    <EntitySet Name="Sys_User" EntityType="OurSolutionModel.Sys_User" />
+    <AssociationSet Name="FK_Basic_DeviceToken_Sys_User" Association="OurSolutionModel.FK_Basic_DeviceToken_Sys_User">
+      <End Role="Sys_User" EntitySet="Sys_User" />
+      <End Role="Basic_DeviceToken" EntitySet="Basic_DeviceToken" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_GroupUser_Sys_User" Association="OurSolutionModel.FK_Basic_GroupUser_Sys_User">
+      <End Role="Sys_User" EntitySet="Sys_User" />
+      <End Role="Basic_GroupUser_Relationship" EntitySet="Basic_GroupUser_Relationship" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_OrganizeUser_Relationship_Sys_User" Association="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Sys_User">
+      <End Role="Sys_User" EntitySet="Sys_User" />
+      <End Role="Basic_OrganizeUser_Relationship" EntitySet="Basic_OrganizeUser_Relationship" />
+    </AssociationSet>
+    <EntitySet Name="Basic_TelephoneDirectory" EntityType="OurSolutionModel.Basic_TelephoneDirectory" />
+    <AssociationSet Name="FK_Basic_TelephoneDirectory_Sys_School" Association="OurSolutionModel.FK_Basic_TelephoneDirectory_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Basic_TelephoneDirectory" EntitySet="Basic_TelephoneDirectory" />
+    </AssociationSet>
+    <EntitySet Name="Basic_NewsCategory" EntityType="OurSolutionModel.Basic_NewsCategory" />
+    <AssociationSet Name="FK_Basic_NewsColumn_Sys_School" Association="OurSolutionModel.FK_Basic_NewsColumn_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Basic_NewsCategory" EntitySet="Basic_NewsCategory" />
+    </AssociationSet>
+    <EntitySet Name="Basic_Attachment" EntityType="OurSolutionModel.Basic_Attachment" />
+    <EntitySet Name="Message_RegisterMobile" EntityType="OurSolutionModel.Message_RegisterMobile" />
+    <EntitySet Name="Basic_Class" EntityType="OurSolutionModel.Basic_Class" />
+    <EntitySet Name="Basic_Specialty" EntityType="OurSolutionModel.Basic_Specialty" />
+    <EntitySet Name="Basic_Student" EntityType="OurSolutionModel.Basic_Student" />
+    <AssociationSet Name="FK_Basic_Student_Basic_Class" Association="OurSolutionModel.FK_Basic_Student_Basic_Class">
+      <End Role="Basic_Class" EntitySet="Basic_Class" />
+      <End Role="Basic_Student" EntitySet="Basic_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_Specialty_Sys_School" Association="OurSolutionModel.FK_Basic_Specialty_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Basic_Specialty" EntitySet="Basic_Specialty" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_Student_Basic_Specialty" Association="OurSolutionModel.FK_Basic_Student_Basic_Specialty">
+      <End Role="Basic_Specialty" EntitySet="Basic_Specialty" />
+      <End Role="Basic_Student" EntitySet="Basic_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_Student_Sys_User" Association="OurSolutionModel.FK_Basic_Student_Sys_User">
+      <End Role="Sys_User" EntitySet="Sys_User" />
+      <End Role="Basic_Student" EntitySet="Basic_Student" />
+    </AssociationSet>
+    <EntitySet Name="Basic_News" EntityType="OurSolutionModel.Basic_News" />
+    <AssociationSet Name="FK_Basic_News_Basic_NewsCategory" Association="OurSolutionModel.FK_Basic_News_Basic_NewsCategory">
+      <End Role="Basic_NewsCategory" EntitySet="Basic_NewsCategory" />
+      <End Role="Basic_News" EntitySet="Basic_News" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_News_Sys_School" Association="OurSolutionModel.FK_Basic_News_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Basic_News" EntitySet="Basic_News" />
+    </AssociationSet>
+    <EntitySet Name="Message_SchoolKeys" EntityType="OurSolutionModel.Message_SchoolKeys" />
+    <EntitySet Name="Sys_OtherSysInterfaceAddr" EntityType="OurSolutionModel.Sys_OtherSysInterfaceAddr" />
+    <AssociationSet Name="FK_Message_SchoolKeys_Sys_School" Association="OurSolutionModel.FK_Message_SchoolKeys_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Message_SchoolKeys" EntitySet="Message_SchoolKeys" />
+    </AssociationSet>
+    <EntitySet Name="Sys_SMSDetailLog" EntityType="OurSolutionModel.Sys_SMSDetailLog" />
+    <EntitySet Name="Sys_Config" EntityType="OurSolutionModel.Sys_Config" />
+    <EntitySet Name="VenuSoft_Message_NotFullRemind" EntityType="OurSolutionModel.VenuSoft_Message_NotFullRemind" />
+    <EntitySet Name="VenuSoft_User" EntityType="OurSolutionModel.VenuSoft_User" />
+    <AssociationSet Name="FK_VenuSoft_Message_NotFullRemind_VenuSoft_User" Association="OurSolutionModel.FK_VenuSoft_Message_NotFullRemind_VenuSoft_User">
+      <End Role="VenuSoft_User" EntitySet="VenuSoft_User" />
+      <End Role="VenuSoft_Message_NotFullRemind" EntitySet="VenuSoft_Message_NotFullRemind" />
+    </AssociationSet>
+    <EntitySet Name="Sys_Theme" EntityType="OurSolutionModel.Sys_Theme" />
+    <AssociationSet Name="Sys_SchoolTheme_Relationship" Association="OurSolutionModel.Sys_SchoolTheme_Relationship">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Sys_Theme" EntitySet="Sys_Theme" />
+    </AssociationSet>
+    <EntitySet Name="Sys_PushMessage" EntityType="OurSolutionModel.Sys_PushMessage" />
+    <EntitySet Name="Content_Article" EntityType="OurSolutionModel.Content_Article" />
+    <EntitySet Name="Content_ArticleSlide" EntityType="OurSolutionModel.Content_ArticleSlide" />
+    <EntitySet Name="Content_Category" EntityType="OurSolutionModel.Content_Category" />
+    <AssociationSet Name="FK_Content_Article_Content_Category" Association="OurSolutionModel.FK_Content_Article_Content_Category">
+      <End Role="Content_Category" EntitySet="Content_Category" />
+      <End Role="Content_Article" EntitySet="Content_Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Content_ArticleSlide_Content_Article1" Association="OurSolutionModel.FK_Content_ArticleSlide_Content_Article1">
+      <End Role="Content_Article" EntitySet="Content_Article" />
+      <End Role="Content_ArticleSlide" EntitySet="Content_ArticleSlide" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Content_Category_Content_Category" Association="OurSolutionModel.FK_Content_Category_Content_Category">
+      <End Role="Content_Category" EntitySet="Content_Category" />
+      <End Role="Content_Category1" EntitySet="Content_Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Content_Article_Sys_School" Association="OurSolutionModel.FK_Content_Article_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Content_Article" EntitySet="Content_Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Content_Category_Sys_School" Association="OurSolutionModel.FK_Content_Category_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Content_Category" EntitySet="Content_Category" />
+    </AssociationSet>
+    <EntitySet Name="Sys_Role" EntityType="OurSolutionModel.Sys_Role" />
+    <AssociationSet Name="Sys_RoleUser" Association="OurSolutionModel.Sys_RoleUser">
+      <End Role="Sys_Role" EntitySet="Sys_Role" />
+      <End Role="Sys_User" EntitySet="Sys_User" />
+    </AssociationSet>
+    <EntitySet Name="Sys_Menu" EntityType="OurSolutionModel.Sys_Menu" />
+    <EntitySet Name="Sys_Operation" EntityType="OurSolutionModel.Sys_Operation" />
+    <EntitySet Name="Sys_RoleMenuOperation" EntityType="OurSolutionModel.Sys_RoleMenuOperation" />
+    <AssociationSet Name="FK_Sys_Menu_Sys_Menu" Association="OurSolutionModel.FK_Sys_Menu_Sys_Menu">
+      <End Role="Sys_Menu" EntitySet="Sys_Menu" />
+      <End Role="Sys_Menu1" EntitySet="Sys_Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_RoleMenuOperation_Sys_Menu" Association="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Menu">
+      <End Role="Sys_Menu" EntitySet="Sys_Menu" />
+      <End Role="Sys_RoleMenuOperation" EntitySet="Sys_RoleMenuOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_RoleMenuOperation_Sys_Operation" Association="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Operation">
+      <End Role="Sys_Operation" EntitySet="Sys_Operation" />
+      <End Role="Sys_RoleMenuOperation" EntitySet="Sys_RoleMenuOperation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_RoleMenuOperation_Sys_Role" Association="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Role">
+      <End Role="Sys_Role" EntitySet="Sys_Role" />
+      <End Role="Sys_RoleMenuOperation" EntitySet="Sys_RoleMenuOperation" />
+    </AssociationSet>
+    <AssociationSet Name="Sys_MenuOperation" Association="OurSolutionModel.Sys_MenuOperation">
+      <End Role="Sys_Menu" EntitySet="Sys_Menu" />
+      <End Role="Sys_Operation" EntitySet="Sys_Operation" />
+    </AssociationSet>
+    <AssociationSet Name="Sys_RoleMenu" Association="OurSolutionModel.Sys_RoleMenu">
+      <End Role="Sys_Menu" EntitySet="Sys_Menu" />
+      <End Role="Sys_Role" EntitySet="Sys_Role" />
+    </AssociationSet>
+    <EntitySet Name="Basic_TeacherInfo" EntityType="OurSolutionModel.Basic_TeacherInfo" />
+    <EntitySet Name="Basic_TeacherInfo_Education" EntityType="OurSolutionModel.Basic_TeacherInfo_Education" />
+    <EntitySet Name="Basic_TeacherInfo_Experience" EntityType="OurSolutionModel.Basic_TeacherInfo_Experience" />
+    <EntitySet Name="Basic_TeacherInfo_Fruit" EntityType="OurSolutionModel.Basic_TeacherInfo_Fruit" />
+    <EntitySet Name="Basic_TeacherInfo_Practice" EntityType="OurSolutionModel.Basic_TeacherInfo_Practice" />
+    <EntitySet Name="Basic_TeacherInfo_Reward" EntityType="OurSolutionModel.Basic_TeacherInfo_Reward" />
+    <EntitySet Name="Basic_TeacherInfo_Training" EntityType="OurSolutionModel.Basic_TeacherInfo_Training" />
+    <AssociationSet Name="FK_Basic_TeacherInfo_Education_Basic_TeacherInfo" Association="OurSolutionModel.FK_Basic_TeacherInfo_Education_Basic_TeacherInfo">
+      <End Role="Basic_TeacherInfo" EntitySet="Basic_TeacherInfo" />
+      <End Role="Basic_TeacherInfo_Education" EntitySet="Basic_TeacherInfo_Education" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_TeacherInfo_Experience_Basic_TeacherInfo" Association="OurSolutionModel.FK_Basic_TeacherInfo_Experience_Basic_TeacherInfo">
+      <End Role="Basic_TeacherInfo" EntitySet="Basic_TeacherInfo" />
+      <End Role="Basic_TeacherInfo_Experience" EntitySet="Basic_TeacherInfo_Experience" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_TeacherInfo_Fruit_Basic_TeacherInfo" Association="OurSolutionModel.FK_Basic_TeacherInfo_Fruit_Basic_TeacherInfo">
+      <End Role="Basic_TeacherInfo" EntitySet="Basic_TeacherInfo" />
+      <End Role="Basic_TeacherInfo_Fruit" EntitySet="Basic_TeacherInfo_Fruit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_TeacherInfo_Practice_Basic_TeacherInfo" Association="OurSolutionModel.FK_Basic_TeacherInfo_Practice_Basic_TeacherInfo">
+      <End Role="Basic_TeacherInfo" EntitySet="Basic_TeacherInfo" />
+      <End Role="Basic_TeacherInfo_Practice" EntitySet="Basic_TeacherInfo_Practice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_TeacherInfo_Reward_Basic_TeacherInfo" Association="OurSolutionModel.FK_Basic_TeacherInfo_Reward_Basic_TeacherInfo">
+      <End Role="Basic_TeacherInfo" EntitySet="Basic_TeacherInfo" />
+      <End Role="Basic_TeacherInfo_Reward" EntitySet="Basic_TeacherInfo_Reward" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_TeacherInfo_Sys_User" Association="OurSolutionModel.FK_Basic_TeacherInfo_Sys_User">
+      <End Role="Sys_User" EntitySet="Sys_User" />
+      <End Role="Basic_TeacherInfo" EntitySet="Basic_TeacherInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Basic_TeacherInfo_Training_Basic_TeacherInfo_Training" Association="OurSolutionModel.FK_Basic_TeacherInfo_Training_Basic_TeacherInfo_Training">
+      <End Role="Basic_TeacherInfo" EntitySet="Basic_TeacherInfo" />
+      <End Role="Basic_TeacherInfo_Training" EntitySet="Basic_TeacherInfo_Training" />
+    </AssociationSet>
+    <EntitySet Name="Basic_Department" EntityType="OurSolutionModel.Basic_Department" />
+    <AssociationSet Name="Basic_DepartmentTeacher" Association="OurSolutionModel.Basic_DepartmentTeacher">
+      <End Role="Basic_Department" EntitySet="Basic_Department" />
+      <End Role="Basic_TeacherInfo" EntitySet="Basic_TeacherInfo" />
+    </AssociationSet>
+    <EntitySet Name="Basic_Hobby" EntityType="OurSolutionModel.Basic_Hobby" />
+    <AssociationSet Name="FK_Sys_Menu_Sys_School" Association="OurSolutionModel.FK_Sys_Menu_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Sys_Menu" EntitySet="Sys_Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sys_School_Extend_Sys_School" Association="OurSolutionModel.FK_Sys_School_Extend_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Sys_School_Extend" EntitySet="Sys_School_Extend" />
+    </AssociationSet>
+    <EntitySet Name="Basic_DictCode" EntityType="OurSolutionModel.Basic_DictCode" />
+    <EntitySet Name="Basic_DictCodeType" EntityType="OurSolutionModel.Basic_DictCodeType" />
+    <EntitySet Name="Sys_School_PanelContent" EntityType="OurSolutionModel.Sys_School_PanelContent" />
+    <AssociationSet Name="FK_Sys_School_PanelContent_Sys_School" Association="OurSolutionModel.FK_Sys_School_PanelContent_Sys_School">
+      <End Role="Sys_School" EntitySet="Sys_School" />
+      <End Role="Sys_School_PanelContent" EntitySet="Sys_School_PanelContent" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Basic_Campus">
+    <Key>
+      <PropertyRef Name="CampusID" />
+    </Key>
+    <Property Name="CampusID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CampusName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CampusCoords" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Basic_Campus_Sys_School" FromRole="Basic_Campus" ToRole="Sys_School" />
+  </EntityType>
+  <EntityType Name="Basic_Device">
+    <Key>
+      <PropertyRef Name="SchoolID" />
+      <PropertyRef Name="UserNO" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserNO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceUUID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegistTime" Type="DateTime" Precision="3" />
+    <Property Name="Platform" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PlatformVersion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Basic_DeviceToken">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IOSDeviceToken" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Basic_DeviceToken_Sys_School" FromRole="Basic_DeviceToken" ToRole="Sys_School" />
+    <NavigationProperty Name="Sys_User" Relationship="OurSolutionModel.FK_Basic_DeviceToken_Sys_User" FromRole="Basic_DeviceToken" ToRole="Sys_User" />
+  </EntityType>
+  <EntityType Name="Basic_Notice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SendRange" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SendUserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SendContent" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CreatTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Basic_NoticeUser_Relationship">
+    <Key>
+      <PropertyRef Name="SchoolID" />
+      <PropertyRef Name="NoticeID" />
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoticeID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Sys_Log">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="Int32" Nullable="false" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OperationStatus" Type="Int32" />
+    <Property Name="UserType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Basic_Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="CreateUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Basic_GroupUser_Relationship" Relationship="OurSolutionModel.FK_Basic_GroupUser_Basic_Group" FromRole="Basic_Group" ToRole="Basic_GroupUser_Relationship" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Basic_Group_Sys_School" FromRole="Basic_Group" ToRole="Sys_School" />
+  </EntityType>
+  <EntityType Name="Basic_GroupUser_Relationship">
+    <Key>
+      <PropertyRef Name="SchoolID" />
+      <PropertyRef Name="GroupID" />
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GroupID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Basic_Group" Relationship="OurSolutionModel.FK_Basic_GroupUser_Basic_Group" FromRole="Basic_GroupUser_Relationship" ToRole="Basic_Group" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Basic_GroupUser_Sys_School" FromRole="Basic_GroupUser_Relationship" ToRole="Sys_School" />
+    <NavigationProperty Name="Sys_User" Relationship="OurSolutionModel.FK_Basic_GroupUser_Sys_User" FromRole="Basic_GroupUser_Relationship" ToRole="Sys_User" />
+  </EntityType>
+  <Association Name="FK_Basic_GroupUser_Basic_Group">
+    <End Type="OurSolutionModel.Basic_Group" Role="Basic_Group" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_GroupUser_Relationship" Role="Basic_GroupUser_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_GroupUser_Relationship">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Basic_Organize">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderIndex" Type="Int32" Nullable="false" />
+    <Property Name="CreateUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="Remark" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Basic_OrganizeUser_Relationship" Relationship="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Basic_Organize" FromRole="Basic_Organize" ToRole="Basic_OrganizeUser_Relationship" />
+  </EntityType>
+  <EntityType Name="Basic_OrganizeUser_Relationship">
+    <Key>
+      <PropertyRef Name="SchoolID" />
+      <PropertyRef Name="OrganizeID" />
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrganizeID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Basic_Organize" Relationship="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Basic_Organize" FromRole="Basic_OrganizeUser_Relationship" ToRole="Basic_Organize" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Sys_School" FromRole="Basic_OrganizeUser_Relationship" ToRole="Sys_School" />
+    <NavigationProperty Name="Sys_User" Relationship="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Sys_User" FromRole="Basic_OrganizeUser_Relationship" ToRole="Sys_User" />
+  </EntityType>
+  <Association Name="FK_Basic_OrganizeUser_Relationship_Basic_Organize">
+    <End Type="OurSolutionModel.Basic_Organize" Role="Basic_Organize" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_OrganizeUser_Relationship" Role="Basic_OrganizeUser_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_Organize">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_OrganizeUser_Relationship">
+        <PropertyRef Name="OrganizeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Sys_Feature">
+    <Key>
+      <PropertyRef Name="FeatureID" />
+    </Key>
+    <Property Name="FeatureID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureIcon" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureType" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_Feature_Authority" Relationship="OurSolutionModel.FK_Sys_Feature_Authority_Sys_Feature" FromRole="Sys_Feature" ToRole="Sys_Feature_Authority" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Sys_Feature_Sys_School" FromRole="Sys_Feature" ToRole="Sys_School" />
+  </EntityType>
+  <EntityType Name="Sys_Feature_Authority">
+    <Key>
+      <PropertyRef Name="SchoolID" />
+      <PropertyRef Name="FeatureID" />
+      <PropertyRef Name="TargetID" />
+      <PropertyRef Name="TargetType" />
+    </Key>
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TargetID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TargetType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Sys_Feature" Relationship="OurSolutionModel.FK_Sys_Feature_Authority_Sys_Feature" FromRole="Sys_Feature_Authority" ToRole="Sys_Feature" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Sys_Feature_Authority_Sys_School" FromRole="Sys_Feature_Authority" ToRole="Sys_School" />
+  </EntityType>
+  <EntityType Name="Sys_School">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LogoUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="WebSiteUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_Campus" Relationship="OurSolutionModel.FK_Basic_Campus_Sys_School" FromRole="Sys_School" ToRole="Basic_Campus" />
+    <NavigationProperty Name="Basic_DeviceToken" Relationship="OurSolutionModel.FK_Basic_DeviceToken_Sys_School" FromRole="Sys_School" ToRole="Basic_DeviceToken" />
+    <NavigationProperty Name="Basic_Group" Relationship="OurSolutionModel.FK_Basic_Group_Sys_School" FromRole="Sys_School" ToRole="Basic_Group" />
+    <NavigationProperty Name="Basic_GroupUser_Relationship" Relationship="OurSolutionModel.FK_Basic_GroupUser_Sys_School" FromRole="Sys_School" ToRole="Basic_GroupUser_Relationship" />
+    <NavigationProperty Name="Basic_OrganizeUser_Relationship" Relationship="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Sys_School" FromRole="Sys_School" ToRole="Basic_OrganizeUser_Relationship" />
+    <NavigationProperty Name="Sys_Feature" Relationship="OurSolutionModel.FK_Sys_Feature_Sys_School" FromRole="Sys_School" ToRole="Sys_Feature" />
+    <NavigationProperty Name="Sys_Feature_Authority" Relationship="OurSolutionModel.FK_Sys_Feature_Authority_Sys_School" FromRole="Sys_School" ToRole="Sys_Feature_Authority" />
+    <NavigationProperty Name="Basic_TelephoneDirectory" Relationship="OurSolutionModel.FK_Basic_TelephoneDirectory_Sys_School" FromRole="Sys_School" ToRole="Basic_TelephoneDirectory" />
+    <NavigationProperty Name="Basic_NewsCategory" Relationship="OurSolutionModel.FK_Basic_NewsColumn_Sys_School" FromRole="Sys_School" ToRole="Basic_NewsCategory" />
+    <NavigationProperty Name="Basic_Specialty" Relationship="OurSolutionModel.FK_Basic_Specialty_Sys_School" FromRole="Sys_School" ToRole="Basic_Specialty" />
+    <NavigationProperty Name="Basic_News" Relationship="OurSolutionModel.FK_Basic_News_Sys_School" FromRole="Sys_School" ToRole="Basic_News" />
+    <NavigationProperty Name="Message_SchoolKeys" Relationship="OurSolutionModel.FK_Message_SchoolKeys_Sys_School" FromRole="Sys_School" ToRole="Message_SchoolKeys" />
+    <Property Name="EnglishName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sys_Theme" Relationship="OurSolutionModel.Sys_SchoolTheme_Relationship" FromRole="Sys_School" ToRole="Sys_Theme" />
+    <NavigationProperty Name="Content_Article" Relationship="OurSolutionModel.FK_Content_Article_Sys_School" FromRole="Sys_School" ToRole="Content_Article" />
+    <NavigationProperty Name="Content_Category" Relationship="OurSolutionModel.FK_Content_Category_Sys_School" FromRole="Sys_School" ToRole="Content_Category" />
+    <NavigationProperty Name="Sys_Menu" Relationship="OurSolutionModel.FK_Sys_Menu_Sys_School" FromRole="Sys_School" ToRole="Sys_Menu" />
+    <NavigationProperty Name="Sys_School_Extend" Relationship="OurSolutionModel.FK_Sys_School_Extend_Sys_School" FromRole="Sys_School" ToRole="Sys_School_Extend" />
+    <NavigationProperty Name="Sys_School_PanelContent" Relationship="OurSolutionModel.FK_Sys_School_PanelContent_Sys_School" FromRole="Sys_School" ToRole="Sys_School_PanelContent" />
+  </EntityType>
+  <EntityType Name="Sys_School_Extend">
+    <Key>
+      <PropertyRef Name="SchoolID" />
+    </Key>
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Honor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Sys_School_Extend_Sys_School" FromRole="Sys_School_Extend" ToRole="Sys_School" />
+  </EntityType>
+  <Association Name="FK_Basic_Campus_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_Campus" Role="Basic_Campus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_Campus">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_DeviceToken_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_DeviceToken" Role="Basic_DeviceToken" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_DeviceToken">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_Group_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_Group" Role="Basic_Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_Group">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_GroupUser_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_GroupUser_Relationship" Role="Basic_GroupUser_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_GroupUser_Relationship">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_OrganizeUser_Relationship_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_OrganizeUser_Relationship" Role="Basic_OrganizeUser_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_OrganizeUser_Relationship">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_Feature_Authority_Sys_Feature">
+    <End Type="OurSolutionModel.Sys_Feature" Role="Sys_Feature" Multiplicity="1" />
+    <End Type="OurSolutionModel.Sys_Feature_Authority" Role="Sys_Feature_Authority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Feature">
+        <PropertyRef Name="FeatureID" />
+      </Principal>
+      <Dependent Role="Sys_Feature_Authority">
+        <PropertyRef Name="FeatureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_Feature_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Sys_Feature" Role="Sys_Feature" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sys_Feature">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_Feature_Authority_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Sys_Feature_Authority" Role="Sys_Feature_Authority" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sys_Feature_Authority">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Sys_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LoginID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_DeviceToken" Relationship="OurSolutionModel.FK_Basic_DeviceToken_Sys_User" FromRole="Sys_User" ToRole="Basic_DeviceToken" />
+    <NavigationProperty Name="Basic_GroupUser_Relationship" Relationship="OurSolutionModel.FK_Basic_GroupUser_Sys_User" FromRole="Sys_User" ToRole="Basic_GroupUser_Relationship" />
+    <NavigationProperty Name="Basic_OrganizeUser_Relationship" Relationship="OurSolutionModel.FK_Basic_OrganizeUser_Relationship_Sys_User" FromRole="Sys_User" ToRole="Basic_OrganizeUser_Relationship" />
+    <NavigationProperty Name="Basic_Student" Relationship="OurSolutionModel.FK_Basic_Student_Sys_User" FromRole="Sys_User" ToRole="Basic_Student" />
+    <NavigationProperty Name="Sys_Role" Relationship="OurSolutionModel.Sys_RoleUser" FromRole="Sys_User" ToRole="Sys_Role" />
+    <NavigationProperty Name="Basic_TeacherInfo" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Sys_User" FromRole="Sys_User" ToRole="Basic_TeacherInfo" />
+    <Property Name="HeaderImage" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="QRCode" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Basic_DeviceToken_Sys_User">
+    <End Type="OurSolutionModel.Sys_User" Role="Sys_User" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_DeviceToken" Role="Basic_DeviceToken" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_DeviceToken">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_GroupUser_Sys_User">
+    <End Type="OurSolutionModel.Sys_User" Role="Sys_User" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_GroupUser_Relationship" Role="Basic_GroupUser_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_GroupUser_Relationship">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_OrganizeUser_Relationship_Sys_User">
+    <End Type="OurSolutionModel.Sys_User" Role="Sys_User" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_OrganizeUser_Relationship" Role="Basic_OrganizeUser_Relationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_OrganizeUser_Relationship">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Basic_TelephoneDirectory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ExtNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Basic_TelephoneDirectory_Sys_School" FromRole="Basic_TelephoneDirectory" ToRole="Sys_School" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Basic_TelephoneDirectory_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_TelephoneDirectory" Role="Basic_TelephoneDirectory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_TelephoneDirectory">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Basic_NewsCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Basic_NewsColumn_Sys_School" FromRole="Basic_NewsCategory" ToRole="Sys_School" />
+    <NavigationProperty Name="Basic_News" Relationship="OurSolutionModel.FK_Basic_News_Basic_NewsCategory" FromRole="Basic_NewsCategory" ToRole="Basic_News" />
+  </EntityType>
+  <Association Name="FK_Basic_NewsColumn_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_NewsCategory" Role="Basic_NewsCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_NewsCategory">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Basic_Attachment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="TargetID" Type="Guid" Nullable="false" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FilePath" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FileOrcName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FileName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FileSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FileType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Message_RegisterMobile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MessageCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GenerateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <Property Name="IsVerify" Type="Int32" />
+    <Property Name="MessageType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Basic_Class">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_Student" Relationship="OurSolutionModel.FK_Basic_Student_Basic_Class" FromRole="Basic_Class" ToRole="Basic_Student" />
+  </EntityType>
+  <EntityType Name="Basic_Specialty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Basic_Specialty_Sys_School" FromRole="Basic_Specialty" ToRole="Sys_School" />
+    <NavigationProperty Name="Basic_Student" Relationship="OurSolutionModel.FK_Basic_Student_Basic_Specialty" FromRole="Basic_Specialty" ToRole="Basic_Student" />
+  </EntityType>
+  <EntityType Name="Basic_Student">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="Int32" Nullable="false" />
+    <Property Name="ClassID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialtyID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StartYear" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_Class" Relationship="OurSolutionModel.FK_Basic_Student_Basic_Class" FromRole="Basic_Student" ToRole="Basic_Class" />
+    <NavigationProperty Name="Basic_Specialty" Relationship="OurSolutionModel.FK_Basic_Student_Basic_Specialty" FromRole="Basic_Student" ToRole="Basic_Specialty" />
+    <NavigationProperty Name="Sys_User" Relationship="OurSolutionModel.FK_Basic_Student_Sys_User" FromRole="Basic_Student" ToRole="Sys_User" />
+    <Property Name="XH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecentActivities" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ILike" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PersonalSign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Dormitory" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NativePlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Basic_Student_Basic_Class">
+    <End Type="OurSolutionModel.Basic_Class" Role="Basic_Class" Multiplicity="0..1" />
+    <End Type="OurSolutionModel.Basic_Student" Role="Basic_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_Class">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_Student">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_Specialty_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_Specialty" Role="Basic_Specialty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_Specialty">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_Student_Basic_Specialty">
+    <End Type="OurSolutionModel.Basic_Specialty" Role="Basic_Specialty" Multiplicity="0..1" />
+    <End Type="OurSolutionModel.Basic_Student" Role="Basic_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_Specialty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_Student">
+        <PropertyRef Name="SpecialtyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_Student_Sys_User">
+    <End Type="OurSolutionModel.Sys_User" Role="Sys_User" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_Student" Role="Basic_Student" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_Student">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Basic_News">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PreviewImage" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="BrowseCount" Type="Int32" />
+    <Property Name="PublishTime" Type="DateTime" Precision="3" />
+    <Property Name="Abstract" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ContentBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsMainDisplay" Type="Int32" />
+    <Property Name="IsCategoryTop" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_NewsCategory" Relationship="OurSolutionModel.FK_Basic_News_Basic_NewsCategory" FromRole="Basic_News" ToRole="Basic_NewsCategory" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Basic_News_Sys_School" FromRole="Basic_News" ToRole="Sys_School" />
+  </EntityType>
+  <Association Name="FK_Basic_News_Basic_NewsCategory">
+    <End Type="OurSolutionModel.Basic_NewsCategory" Role="Basic_NewsCategory" Multiplicity="0..1" />
+    <End Type="OurSolutionModel.Basic_News" Role="Basic_News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_NewsCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_News">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_News_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_News" Role="Basic_News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_News">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Message_SchoolKeys">
+    <Key>
+      <PropertyRef Name="SchoolID" />
+    </Key>
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Message_SchoolKeys_Sys_School" FromRole="Message_SchoolKeys" ToRole="Sys_School" />
+  </EntityType>
+  <EntityType Name="Sys_OtherSysInterfaceAddr">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <Property Name="DataWebServiceMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Message_SchoolKeys_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Message_SchoolKeys" Role="Message_SchoolKeys" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Message_SchoolKeys">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Sys_SMSDetailLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SMSLogID" Type="Int32" />
+    <Property Name="ReceiveUserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReturnMessage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="SendTime" Type="DateTime" Precision="3" />
+    <Property Name="SenderUserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReceiveUserMobile" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MessageContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_Config">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DefaultValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VenuSoft_Message_NotFullRemind">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="VenuSoft_User" Relationship="OurSolutionModel.FK_VenuSoft_Message_NotFullRemind_VenuSoft_User" FromRole="VenuSoft_Message_NotFullRemind" ToRole="VenuSoft_User" />
+  </EntityType>
+  <EntityType Name="VenuSoft_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LoginID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="VenuSoft_Message_NotFullRemind" Relationship="OurSolutionModel.FK_VenuSoft_Message_NotFullRemind_VenuSoft_User" FromRole="VenuSoft_User" ToRole="VenuSoft_Message_NotFullRemind" />
+  </EntityType>
+  <Association Name="FK_VenuSoft_Message_NotFullRemind_VenuSoft_User">
+    <End Type="OurSolutionModel.VenuSoft_User" Role="VenuSoft_User" Multiplicity="1" />
+    <End Type="OurSolutionModel.VenuSoft_Message_NotFullRemind" Role="VenuSoft_Message_NotFullRemind" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="VenuSoft_User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VenuSoft_Message_NotFullRemind">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Sys_Theme">
+    <Key>
+      <PropertyRef Name="ThemeID" />
+    </Key>
+    <Property Name="ThemeID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThemeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PreViewImage" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CssUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.Sys_SchoolTheme_Relationship" FromRole="Sys_Theme" ToRole="Sys_School" />
+  </EntityType>
+  <Association Name="Sys_SchoolTheme_Relationship">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="*" />
+    <End Type="OurSolutionModel.Sys_Theme" Role="Sys_Theme" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Sys_PushMessage">
+    <Key>
+      <PropertyRef Name="PushID" />
+    </Key>
+    <Property Name="PushID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Content_Article">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecommendType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CoverImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BrowseCount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Digest" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SourceUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PublishTime" Type="DateTime" Precision="3" />
+    <Property Name="ArticleContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsMainDisplay" Type="Int32" />
+    <Property Name="IsCategoryTop" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Content_Category" Relationship="OurSolutionModel.FK_Content_Article_Content_Category" FromRole="Content_Article" ToRole="Content_Category" />
+    <NavigationProperty Name="Content_ArticleSlide" Relationship="OurSolutionModel.FK_Content_ArticleSlide_Content_Article1" FromRole="Content_Article" ToRole="Content_ArticleSlide" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Content_Article_Sys_School" FromRole="Content_Article" ToRole="Sys_School" />
+    <Property Name="CoverImageThumbnailRect" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CoverImageThumbnailSquare" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Content_ArticleSlide">
+    <Key>
+      <PropertyRef Name="SlideID" />
+    </Key>
+    <Property Name="SlideID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ArticleID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SlideFileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SlideImageUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="SlideTitle" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SlideFileSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Content_Article" Relationship="OurSolutionModel.FK_Content_ArticleSlide_Content_Article1" FromRole="Content_ArticleSlide" ToRole="Content_Article" />
+  </EntityType>
+  <EntityType Name="Content_Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParentID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContentLevel" Type="Int32" />
+    <Property Name="ContentPath" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ContentIcon" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Content_Article" Relationship="OurSolutionModel.FK_Content_Article_Content_Category" FromRole="Content_Category" ToRole="Content_Article" />
+    <NavigationProperty Name="Content_Category1" Relationship="OurSolutionModel.FK_Content_Category_Content_Category" FromRole="Content_Category" ToRole="Content_Category1" />
+    <NavigationProperty Name="Content_Category2" Relationship="OurSolutionModel.FK_Content_Category_Content_Category" FromRole="Content_Category1" ToRole="Content_Category" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Content_Category_Sys_School" FromRole="Content_Category" ToRole="Sys_School" />
+  </EntityType>
+  <Association Name="FK_Content_Article_Content_Category">
+    <End Type="OurSolutionModel.Content_Category" Role="Content_Category" Multiplicity="0..1" />
+    <End Type="OurSolutionModel.Content_Article" Role="Content_Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Content_Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Content_Article">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Content_ArticleSlide_Content_Article1">
+    <End Type="OurSolutionModel.Content_Article" Role="Content_Article" Multiplicity="0..1" />
+    <End Type="OurSolutionModel.Content_ArticleSlide" Role="Content_ArticleSlide" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Content_Article">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Content_ArticleSlide">
+        <PropertyRef Name="ArticleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Content_Category_Content_Category">
+    <End Type="OurSolutionModel.Content_Category" Role="Content_Category" Multiplicity="0..1" />
+    <End Type="OurSolutionModel.Content_Category" Role="Content_Category1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Content_Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Content_Category1">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Content_Article_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="0..1" />
+    <End Type="OurSolutionModel.Content_Article" Role="Content_Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Content_Article">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Content_Category_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="0..1" />
+    <End Type="OurSolutionModel.Content_Category" Role="Content_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Content_Category">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Sys_Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsLockUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_User" Relationship="OurSolutionModel.Sys_RoleUser" FromRole="Sys_Role" ToRole="Sys_User" />
+    <NavigationProperty Name="Sys_RoleMenuOperation" Relationship="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Role" FromRole="Sys_Role" ToRole="Sys_RoleMenuOperation" />
+    <NavigationProperty Name="Sys_Menu" Relationship="OurSolutionModel.Sys_RoleMenu" FromRole="Sys_Role" ToRole="Sys_Menu" />
+  </EntityType>
+  <Association Name="Sys_RoleUser">
+    <End Type="OurSolutionModel.Sys_Role" Role="Sys_Role" Multiplicity="*" />
+    <End Type="OurSolutionModel.Sys_User" Role="Sys_User" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Sys_Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MenuName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MenuUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="MenuIconClass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MenuIconImageUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="ParentMenuID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Depth" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_Menu1" Relationship="OurSolutionModel.FK_Sys_Menu_Sys_Menu" FromRole="Sys_Menu" ToRole="Sys_Menu1" />
+    <NavigationProperty Name="Sys_Menu2" Relationship="OurSolutionModel.FK_Sys_Menu_Sys_Menu" FromRole="Sys_Menu1" ToRole="Sys_Menu" />
+    <NavigationProperty Name="Sys_RoleMenuOperation" Relationship="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Menu" FromRole="Sys_Menu" ToRole="Sys_RoleMenuOperation" />
+    <NavigationProperty Name="Sys_Operation" Relationship="OurSolutionModel.Sys_MenuOperation" FromRole="Sys_Menu" ToRole="Sys_Operation" />
+    <NavigationProperty Name="Sys_Role" Relationship="OurSolutionModel.Sys_RoleMenu" FromRole="Sys_Menu" ToRole="Sys_Role" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Sys_Menu_Sys_School" FromRole="Sys_Menu" ToRole="Sys_School" />
+  </EntityType>
+  <EntityType Name="Sys_Operation">
+    <Key>
+      <PropertyRef Name="OperationID" />
+    </Key>
+    <Property Name="OperationID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OperationName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OperationClass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OperationImageUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_RoleMenuOperation" Relationship="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Operation" FromRole="Sys_Operation" ToRole="Sys_RoleMenuOperation" />
+    <NavigationProperty Name="Sys_Menu" Relationship="OurSolutionModel.Sys_MenuOperation" FromRole="Sys_Operation" ToRole="Sys_Menu" />
+  </EntityType>
+  <EntityType Name="Sys_RoleMenuOperation">
+    <Key>
+      <PropertyRef Name="RoleID" />
+      <PropertyRef Name="MenuID" />
+      <PropertyRef Name="OperationID" />
+    </Key>
+    <Property Name="RoleID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MenuID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OperationID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sys_Menu" Relationship="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Menu" FromRole="Sys_RoleMenuOperation" ToRole="Sys_Menu" />
+    <NavigationProperty Name="Sys_Operation" Relationship="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Operation" FromRole="Sys_RoleMenuOperation" ToRole="Sys_Operation" />
+    <NavigationProperty Name="Sys_Role" Relationship="OurSolutionModel.FK_Sys_RoleMenuOperation_Sys_Role" FromRole="Sys_RoleMenuOperation" ToRole="Sys_Role" />
+  </EntityType>
+  <Association Name="FK_Sys_Menu_Sys_Menu">
+    <End Type="OurSolutionModel.Sys_Menu" Role="Sys_Menu" Multiplicity="0..1" />
+    <End Type="OurSolutionModel.Sys_Menu" Role="Sys_Menu1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Menu">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="Sys_Menu1">
+        <PropertyRef Name="ParentMenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_RoleMenuOperation_Sys_Menu">
+    <End Type="OurSolutionModel.Sys_Menu" Role="Sys_Menu" Multiplicity="1" />
+    <End Type="OurSolutionModel.Sys_RoleMenuOperation" Role="Sys_RoleMenuOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Menu">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="Sys_RoleMenuOperation">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_RoleMenuOperation_Sys_Operation">
+    <End Type="OurSolutionModel.Sys_Operation" Role="Sys_Operation" Multiplicity="1" />
+    <End Type="OurSolutionModel.Sys_RoleMenuOperation" Role="Sys_RoleMenuOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Operation">
+        <PropertyRef Name="OperationID" />
+      </Principal>
+      <Dependent Role="Sys_RoleMenuOperation">
+        <PropertyRef Name="OperationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_RoleMenuOperation_Sys_Role">
+    <End Type="OurSolutionModel.Sys_Role" Role="Sys_Role" Multiplicity="1" />
+    <End Type="OurSolutionModel.Sys_RoleMenuOperation" Role="Sys_RoleMenuOperation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Sys_RoleMenuOperation">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Sys_MenuOperation">
+    <End Type="OurSolutionModel.Sys_Menu" Role="Sys_Menu" Multiplicity="*" />
+    <End Type="OurSolutionModel.Sys_Operation" Role="Sys_Operation" Multiplicity="*" />
+  </Association>
+  <Association Name="Sys_RoleMenu">
+    <End Type="OurSolutionModel.Sys_Menu" Role="Sys_Menu" Multiplicity="*" />
+    <End Type="OurSolutionModel.Sys_Role" Role="Sys_Role" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Basic_TeacherInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="Boolean" Nullable="false" />
+    <Property Name="PhotoUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="Ethnic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NativePlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Political" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Healthy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ZipCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostalAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="HomeAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JobType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeachingType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeacherProperty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Degree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstLanguage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstExtent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecondLanguage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecondExtent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeachSpecialty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Discipline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Certificate1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Level1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GetDate1" Type="DateTime" Precision="0" />
+    <Property Name="Certificate2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Level2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GetDate2" Type="DateTime" Precision="0" />
+    <Property Name="Certificate3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Level3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GetDate3" Type="DateTime" Precision="0" />
+    <Property Name="TechnicalTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TechnicalGetDate" Type="DateTime" Precision="0" />
+    <Property Name="WorkYears" Type="Int32" />
+    <Property Name="ManagerYears" Type="Int32" />
+    <Property Name="Certificate4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Level4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GetDate4" Type="DateTime" Precision="0" />
+    <Property Name="Certificate5" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Level5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GetDate5" Type="DateTime" Precision="0" />
+    <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsManager" Type="Boolean" />
+    <Property Name="Forte" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_TeacherInfo_Education" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Education_Basic_TeacherInfo" FromRole="Basic_TeacherInfo" ToRole="Basic_TeacherInfo_Education" />
+    <NavigationProperty Name="Basic_TeacherInfo_Experience" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Experience_Basic_TeacherInfo" FromRole="Basic_TeacherInfo" ToRole="Basic_TeacherInfo_Experience" />
+    <NavigationProperty Name="Basic_TeacherInfo_Fruit" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Fruit_Basic_TeacherInfo" FromRole="Basic_TeacherInfo" ToRole="Basic_TeacherInfo_Fruit" />
+    <NavigationProperty Name="Basic_TeacherInfo_Practice" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Practice_Basic_TeacherInfo" FromRole="Basic_TeacherInfo" ToRole="Basic_TeacherInfo_Practice" />
+    <NavigationProperty Name="Basic_TeacherInfo_Reward" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Reward_Basic_TeacherInfo" FromRole="Basic_TeacherInfo" ToRole="Basic_TeacherInfo_Reward" />
+    <NavigationProperty Name="Sys_User" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Sys_User" FromRole="Basic_TeacherInfo" ToRole="Sys_User" />
+    <NavigationProperty Name="Basic_TeacherInfo_Training" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Training_Basic_TeacherInfo_Training" FromRole="Basic_TeacherInfo" ToRole="Basic_TeacherInfo_Training" />
+    <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecentActivities" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ILike" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PersonalSign" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Basic_Department" Relationship="OurSolutionModel.Basic_DepartmentTeacher" FromRole="Basic_TeacherInfo" ToRole="Basic_Department" />
+  </EntityType>
+  <EntityType Name="Basic_TeacherInfo_Education">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeacherID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="SchoolName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialtyName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_TeacherInfo" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Education_Basic_TeacherInfo" FromRole="Basic_TeacherInfo_Education" ToRole="Basic_TeacherInfo" />
+  </EntityType>
+  <EntityType Name="Basic_TeacherInfo_Experience">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeacherID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Industry" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_TeacherInfo" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Experience_Basic_TeacherInfo" FromRole="Basic_TeacherInfo_Experience" ToRole="Basic_TeacherInfo" />
+  </EntityType>
+  <EntityType Name="Basic_TeacherInfo_Fruit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeacherID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FruitLevel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GetDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_TeacherInfo" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Fruit_Basic_TeacherInfo" FromRole="Basic_TeacherInfo_Fruit" ToRole="Basic_TeacherInfo" />
+  </EntityType>
+  <EntityType Name="Basic_TeacherInfo_Practice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeacherID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="WorkingDays" Type="Int32" />
+    <Property Name="NotWorkingDays" Type="Int32" />
+    <Property Name="PracticeContent" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Achievement" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_TeacherInfo" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Practice_Basic_TeacherInfo" FromRole="Basic_TeacherInfo_Practice" ToRole="Basic_TeacherInfo" />
+  </EntityType>
+  <EntityType Name="Basic_TeacherInfo_Reward">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeacherID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RewardLevel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RewardType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RewardName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Company" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="GetDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_TeacherInfo" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Reward_Basic_TeacherInfo" FromRole="Basic_TeacherInfo_Reward" ToRole="Basic_TeacherInfo" />
+  </EntityType>
+  <EntityType Name="Basic_TeacherInfo_Training">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeacherID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Organization" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TrainingType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BeginDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_TeacherInfo" Relationship="OurSolutionModel.FK_Basic_TeacherInfo_Training_Basic_TeacherInfo_Training" FromRole="Basic_TeacherInfo_Training" ToRole="Basic_TeacherInfo" />
+  </EntityType>
+  <Association Name="FK_Basic_TeacherInfo_Education_Basic_TeacherInfo">
+    <End Type="OurSolutionModel.Basic_TeacherInfo" Role="Basic_TeacherInfo" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_TeacherInfo_Education" Role="Basic_TeacherInfo_Education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_TeacherInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_TeacherInfo_Education">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_TeacherInfo_Experience_Basic_TeacherInfo">
+    <End Type="OurSolutionModel.Basic_TeacherInfo" Role="Basic_TeacherInfo" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_TeacherInfo_Experience" Role="Basic_TeacherInfo_Experience" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_TeacherInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_TeacherInfo_Experience">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_TeacherInfo_Fruit_Basic_TeacherInfo">
+    <End Type="OurSolutionModel.Basic_TeacherInfo" Role="Basic_TeacherInfo" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_TeacherInfo_Fruit" Role="Basic_TeacherInfo_Fruit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_TeacherInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_TeacherInfo_Fruit">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_TeacherInfo_Practice_Basic_TeacherInfo">
+    <End Type="OurSolutionModel.Basic_TeacherInfo" Role="Basic_TeacherInfo" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_TeacherInfo_Practice" Role="Basic_TeacherInfo_Practice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_TeacherInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_TeacherInfo_Practice">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_TeacherInfo_Reward_Basic_TeacherInfo">
+    <End Type="OurSolutionModel.Basic_TeacherInfo" Role="Basic_TeacherInfo" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_TeacherInfo_Reward" Role="Basic_TeacherInfo_Reward" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_TeacherInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_TeacherInfo_Reward">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_TeacherInfo_Sys_User">
+    <End Type="OurSolutionModel.Sys_User" Role="Sys_User" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_TeacherInfo" Role="Basic_TeacherInfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_TeacherInfo">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Basic_TeacherInfo_Training_Basic_TeacherInfo_Training">
+    <End Type="OurSolutionModel.Basic_TeacherInfo" Role="Basic_TeacherInfo" Multiplicity="1" />
+    <End Type="OurSolutionModel.Basic_TeacherInfo_Training" Role="Basic_TeacherInfo_Training" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basic_TeacherInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Basic_TeacherInfo_Training">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Basic_Department">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParentID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Basic_TeacherInfo" Relationship="OurSolutionModel.Basic_DepartmentTeacher" FromRole="Basic_Department" ToRole="Basic_TeacherInfo" />
+  </EntityType>
+  <Association Name="Basic_DepartmentTeacher">
+    <End Type="OurSolutionModel.Basic_Department" Role="Basic_Department" Multiplicity="*" />
+    <End Type="OurSolutionModel.Basic_TeacherInfo" Role="Basic_TeacherInfo" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Basic_Hobby">
+    <Key>
+      <PropertyRef Name="HobbyID" />
+    </Key>
+    <Property Name="HobbyID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HobbyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_Sys_Menu_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Sys_Menu" Role="Sys_Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sys_Menu">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sys_School_Extend_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Sys_School_Extend" Role="Sys_School_Extend" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sys_School_Extend">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Basic_DictCode">
+    <Key>
+      <PropertyRef Name="DictCodeType" />
+      <PropertyRef Name="DictCode" />
+    </Key>
+    <Property Name="DictCodeType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DictCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DictCodeName" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="240" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Basic_DictCodeType">
+    <Key>
+      <PropertyRef Name="DictCodeType" />
+    </Key>
+    <Property Name="DictCodeType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DictCodeTypeName" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="240" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sys_School_PanelContent">
+    <Key>
+      <PropertyRef Name="SchoolID" />
+      <PropertyRef Name="PanelID" />
+    </Key>
+    <Property Name="SchoolID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PanelID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HTMLContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUser" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DisplayIndex" Type="Int32" />
+    <NavigationProperty Name="Sys_School" Relationship="OurSolutionModel.FK_Sys_School_PanelContent_Sys_School" FromRole="Sys_School_PanelContent" ToRole="Sys_School" />
+  </EntityType>
+  <Association Name="FK_Sys_School_PanelContent_Sys_School">
+    <End Type="OurSolutionModel.Sys_School" Role="Sys_School" Multiplicity="1" />
+    <End Type="OurSolutionModel.Sys_School_PanelContent" Role="Sys_School_PanelContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sys_School">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sys_School_PanelContent">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

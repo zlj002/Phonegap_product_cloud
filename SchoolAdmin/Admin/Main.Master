@@ -1,0 +1,763 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.Master.cs" Inherits="Admin_Main" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <!--json2-->
+    <script src="/plugins/venusoft/json2.js"></script>
+    <!-- basic styles -->
+    <link href="/plugins/ace/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/plugins/ace/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- fonts -->
+    <link href="/plugins/googlecdn/css.css" rel="stylesheet" />
+    <!-- ace styles -->
+    <link rel="stylesheet" href="/plugins/ace/assets/css/ace.min.css" />
+    <link rel="stylesheet" href="/plugins/ace/assets/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="/plugins/ace/assets/css/ace-skins.min.css" />
+
+    <!-- ace settings handler -->
+    <script src="/plugins/ace/assets/js/ace-extra.min.js"></script>
+    <!-- basic scripts -->
+    <script src="/plugins/ace/assets/js/jquery-2.0.3.min.js"></script>
+    <script src="/plugins/ace/assets/js/bootstrap.min.js"></script>
+    <!-- ace scripts -->
+
+    <script src="/plugins/ace/assets/js/ace-elements.min.js"></script>
+    <script src="/plugins/ace/assets/js/ace.min.js"></script>
+    <!--cookies-->
+    <script src="/plugins/venusoft/cookies.js"></script>
+    <!--表单参数-->
+    <script src="/plugins/venusoft/jquery.formparam.js"></script>
+    <!--loading-->
+    <link href="/plugins/venusoft/loading/css.css" rel="stylesheet" />
+    <script src="/plugins/venusoft/loading/jquery.loading.js"></script>
+    <!--angularjs-->
+    <script src="/plugins/angularjs/1.3.0-beta.13/angular.min.js"></script>
+    <script src="/plugins/angularjs/1.3.0-beta.13/angular-sanitize.min.js"></script>
+    <!--urlHelper-->
+    <script src="/plugins/venusoft/urlHelper.js"></script>
+    <!--Layer-->
+    <script src="/plugins/layer-v1.8.5/layer/layer.min.js"></script>
+    <link href="/plugins/bootstrap/css/bootstrap-window.css" rel="stylesheet" />
+
+    <script src="/plugins/bootstrap/js/bootstrap-window.js"></script>
+    <%--<script src="/plugins/venusoft/venusoft.msg.js"></script>--%>
+
+    <!-- 百度编辑器公共变量-->
+    <script>
+        window.UEDITOR_HOME_URL = "/plugins/ueditor1_4_3-utf8-net/";
+        $.ajaxSetup({ cache: false });
+    </script>
+
+    <%--    <script>
+        var beforeURL = serverHost + "/login.html"
+        if (document.referrer != beforeURL) {
+            window.location.href = beforeURL;
+        }
+    </script>--%>
+    <style>
+        /*公共样式*/
+        .form-group {
+            height: 36px;
+        }
+    </style>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body> 
+
+
+        <div class="navbar navbar-default" id="navbar">
+            <script type="text/javascript">
+                try { ace.settings.check('navbar', 'fixed') } catch (e) { }
+            </script>
+
+            <div class="navbar-container" id="navbar-container">
+                <div class="navbar-header pull-left">
+                    <a href="#" class="navbar-brand">
+                        <small>
+                            <i class="icon-leaf"></i>
+                            校园云平台
+                        </small>
+                    </a>
+                    <!-- /.brand -->
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">
+                        <%--<li class="grey">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-tasks"></i>
+                                <span class="badge badge-grey"></span>
+                            </a>
+
+                            <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                                <li class="dropdown-header">
+                                    <i class="icon-ok"></i>
+                                    没有任务
+                                </li>
+
+                                <li>
+                                    <a href="#">查看任务详情
+										<i class="icon-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="purple">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-bell-alt"></i>
+                                <span class="badge badge-important"></span>
+                            </a>
+
+                            <ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                                <li class="dropdown-header">
+                                    <i class="icon-warning-sign"></i>
+                                    暂无通知
+                                </li>
+
+                                <li>
+                                    <a href="#">查看所有通知
+										<i class="icon-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="green">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <i class="icon-envelope"></i>
+                                <span class="badge badge-success"></span>
+                            </a>
+
+                            <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                                <li class="dropdown-header">
+                                    <i class="icon-envelope-alt"></i>
+                                    没有消息
+                                </li>
+
+                                <li>
+                                    <a href="inbox.html">查看所有消息
+										<i class="icon-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>--%>
+
+                        <li class="light-blue">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <img class="nav-user-photo" src="/plugins/ace/assets/avatars/user.jpg" alt="Jason's Photo" width="40" height="40" id="imgCurrentUserHeader" onerror="javascript:this.src='/plugins/ace/assets/avatars/user.jpg';" />
+                                <span class="user-info">
+                                    <small>欢迎光临,</small>
+                                    <span id="spanCurrentUserName"></span>
+                                </span>
+                                <i class="icon-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <%--<li>
+                                    <a href="#">
+                                        <i class="icon-cog"></i>
+                                        设置
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-user"></i>
+                                        个人资料
+                                    </a>
+                                </li>--%>
+
+                                <li>
+                                    <a href="#" id="resultPassword">
+                                        <i class="icon-cog"></i>
+                                        重置密码
+                                    </a>
+                                </li>
+
+                                <%--  <li class="divider"></li>--%>
+
+                                <li>
+                                    <a>
+
+                                        <a href="/Login/Logout.aspx"><i class="icon-off"></i>退出</a>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- /.ace-nav -->
+                </div>
+                <!-- /.navbar-header -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+        <div class="main-container" id="main-container">
+            <script type="text/javascript">
+                try { ace.settings.check('main-container', 'fixed') } catch (e) { }
+            </script>
+
+            <div class="main-container-inner">
+                <a class="menu-toggler" id="menu-toggler" href="#">
+                    <span class="menu-text"></span>
+                </a>
+
+                <div class="sidebar" id="sidebar">
+                    <script type="text/javascript">
+                        try { ace.settings.check('sidebar', 'fixed') } catch (e) { }
+                    </script>
+
+                    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+                        <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                            <a class="btn btn-success" title="首页" href="/Admin/Index.aspx">
+                                <i class="icon-dashboard"></i>
+                            </a>
+
+                            <a class="btn btn-info" title="刷新">
+                                <i class="icon-refresh"></i>
+                            </a>
+
+                            <a class="btn btn-warning" title="个人资料" id="btnSelfInfo">
+                                <i class="icon-user"></i>
+                            </a>
+
+                            <a class="btn btn-danger" title="我的课表" href="/Admin/Teaching/Timetable.aspx">
+                                <i class="icon-book"></i>
+                            </a>
+                        </div>
+
+                        <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                            <span class="btn btn-success"></span>
+
+                            <span class="btn btn-info"></span>
+
+                            <span class="btn btn-warning"></span>
+
+                            <span class="btn btn-danger"></span>
+                        </div>
+                    </div>
+                    <!-- #sidebar-shortcuts -->
+
+                    <ul class="nav nav-list" id="navList">
+                        <%--<li>
+                            <a href="/Admin/Index.aspx?menuID=index">
+                                <i class="icon-dashboard"></i>
+                                <span class="menu-text">首页 </span>
+                            </a>
+                        </li>--%>
+                    </ul>
+                    <%--<ul class="nav nav-list">
+                        <li>
+                            <a href="/Index.aspx">
+                                <i class="icon-dashboard"></i>
+                                <span class="menu-text">首页 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-list"></i>
+                                <span class="menu-text">基础数据 </span>
+
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="/Admin/Basic/sxzx.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        实训中心
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Basic/sxs.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        实训室
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Basic/sxxm.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        实训项目
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Basic/jdzs.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        鉴定站所
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Basic/jdxm.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        鉴定项目
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Basic/gzzd.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        规章制度
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Basic/teacher.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        师资管理
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-magic"></i>
+                                <span class="menu-text">教务管理</span>
+
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="/Admin/Basic/Class.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        班级管理
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Teaching/lessonTime.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        课表管理
+                                    </a>
+                                </li>
+
+                                
+
+                                <li>
+                                    <a href="/Admin/Teaching/workLoad.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        工作量查询
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/Admin/Teaching/Timetable.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        我的课表
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-desktop"></i>
+                                <span class="menu-text">实训管理</span>
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="/Training/attendance.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        实训考勤
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/Training/result.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        实训课堂记录
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/Training/identify.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        鉴定登记
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </li>
+
+
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-desktop"></i>
+                                <span class="menu-text">监控管理</span>
+
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="/Admin/Monitor/monitor.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        实训监控
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-desktop"></i>
+                                <span class="menu-text">资产及运行管理</span>
+
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+
+                                <li>
+                                    <a href="/Admin/Assets/wareHouse.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        仓库信息管理
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Assets/budget.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        经费预算
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/Admin/Assets/purchase.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        资产申购
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="/Admin/Assets/register.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        资产登记
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Assets/Into.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        设备入库
+                                    </a>
+                                </li>
+
+
+
+
+                                <li>
+                                    <a href="/Admin/Assets/receive_Add.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        资产领用
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Assets/MyMission.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        我的任务
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Assets/borrow.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        资产借用
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Assets/revert.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        资产归还
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/Admin/Assets/repair.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        资产维修
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/Admin/Assets/scrap.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        资产报废
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-desktop"></i>
+                                <span class="menu-text">综合报表</span>
+
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="/Admin/Report/Summary.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        年度总结
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/Admin/Report/Certificate.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        鉴定数据统计
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-double-angle-right"></i>
+                                        其它报表
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdown-toggle">
+                                <i class="icon-desktop"></i>
+                                <span class="menu-text">系统管理</span>
+
+                                <b class="arrow icon-angle-down"></b>
+                            </a>
+
+                            <ul class="submenu"> 
+                                <li>
+                                    <a href="/Admin/SystemManager/Sys_RoleManage.aspx">
+                                        <i class="icon-double-angle-right"></i>
+                                        角色管理
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-double-angle-right"></i>
+                                        模块配置
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-double-angle-right"></i>
+                                        操作日志
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                    </ul>--%>
+                    <!-- /.nav-list -->
+
+                    <div class="sidebar-collapse" id="sidebar-collapse">
+                        <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+                    </div>
+
+                    <script type="text/javascript">
+                        try { ace.settings.check('sidebar', 'collapsed') } catch (e) { }
+                    </script>
+                </div>
+
+                <div class="main-content">
+                    <div class="breadcrumbs" id="breadcrumbs">
+                        <script type="text/javascript">
+                            try { ace.settings.check('breadcrumbs', 'fixed') } catch (e) { }
+                        </script>
+
+                        <ul class="breadcrumb">
+                            <li>
+                                <i class="icon-bullhorn"></i>
+                                <a href="#">欢迎移动校园云平台-学校管理后台</a>
+                            </li>
+                            <%--<li>
+                                <i class="icon-home home-icon"></i>
+                                <a href="#">首页</a>
+                            </li>--%>
+
+                            <%--<li>
+                                <a id="modelName" href="#">UI Elements</a>
+                            </li>
+                            <li id="cellName" class="active">Elements</li>--%>
+                        </ul>
+
+                        <!-- .breadcrumb -->
+
+                        <div class="nav-search" id="nav-search">
+                            <form class="form-search">
+                                <span class="input-icon">
+                                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                                    <i class="icon-search nav-search-icon"></i>
+                                </span>
+                            </form>
+                        </div>
+                        <!-- #nav-search -->
+                    </div>
+
+                    <div class="page-content">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!-- /.page-content -->
+                </div>
+                <!-- /.main-content -->
+
+                <div class="ace-settings-container" id="ace-settings-container">
+                    <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+                        <i class="icon-cog bigger-150"></i>
+                    </div>
+
+                    <div class="ace-settings-box" id="ace-settings-box">
+                        <div>
+                            <div class="pull-left">
+                                <select id="skin-colorpicker" class="hide">
+
+                                    <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                                    <option data-skin="default" value="#438EB9">#438EB9</option>
+                                    <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                                    <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                                </select>
+                            </div>
+                            <span>&nbsp; 选择皮肤</span>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+                            <label class="lbl" for="ace-settings-navbar">固定导航条</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+                            <label class="lbl" for="ace-settings-sidebar">固定滑动条</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+                            <label class="lbl" for="ace-settings-breadcrumbs">固定面包屑</label>
+                        </div>
+
+                        <%--   <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+                            <label class="lbl" for="ace-settings-rtl">切换到左边</label>
+                        </div>--%>
+
+                        <div>
+                            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+                            <label class="lbl" for="ace-settings-add-container">
+                                切换窄屏
+								<b></b>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- /#ace-settings-container -->
+            </div>
+            <!-- /.main-container-inner -->
+
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                <i class="icon-double-angle-up icon-only bigger-110"></i>
+            </a>
+        </div>
+
+        <div class="modal fade" id="resetPasswordDIV" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">重置密码</h4>
+                    </div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 70%">
+                                <div class="modal-body">
+
+                                    <div class="row">
+                                        <div class="col-xs-2" style="width: 25%;">
+                                            <font color="red">*</font>旧密码
+                                        </div>
+                                        <div class="col-xs-2" style="width: 75%;">
+                                            <input type="password" id="oldPassword" name="oldPassword" placeholder="请输入旧密码" />
+                                        </div>
+                                    </div>
+
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-xs-2" style="width: 25%;">
+                                            <font color="red">*</font>新密码
+                                        </div>
+                                        <div class="col-xs-2" style="width: 75%;">
+                                            <input type="password" id="newPassword" name="newPassword" placeholder="请输入新密码" />
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-xs-2" style="width: 25%;">
+                                            <font color="red">*</font>确认新密码
+                                        </div>
+                                        <div class="col-xs-2" style="width: 75%;">
+                                            <input type="password" id="newPasswordAgain" name="newPasswordAgain" placeholder="请再次输入新密码" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p style="font-size: 14px; color: red;" id="errorMessage"></p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-success" id="btnSaveResetPwd">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--   <div class="window active" id="winmsgs" tabindex="-1" style="width: 310px; height: 150px; background: #fafafa;" >
+            <div class="window-header">
+                <button type="button" class="close" data-dismiss="window" id="close" aria-hidden="true">
+              x
+            </button>
+                <h4 class="window-title">新消息</h4>
+            </div>
+                <div class="window-body" style="overflow:hidden;">
+                    dnsndfsd
+                    <div id="winmsg_c" style="padding: 10px;"></div>
+                </div>
+        </div>
+        <script>
+         $("#close").click(function () {
+            $(this).parent().parent().hide();
+         })
+         </script>--%>
+        <!-- /.main-container -->
+
+
+
+        <!-- inline scripts related to this page -->
+        <script src="/Admin/BizJS/Master.js"></script>
+     
+</body>
+</html>

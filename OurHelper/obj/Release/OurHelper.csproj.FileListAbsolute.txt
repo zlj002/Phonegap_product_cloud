@@ -1,0 +1,8 @@
+E:\workspace\VenuSoft_Cloud\OurHelper\obj\Release\OurHelper.csprojResolveAssemblyReference.cache
+E:\workspace\VenuSoft_Cloud\OurHelper\obj\Release\OurHelper.csproj.ResolveComReference.cache
+E:\workspace\VenuSoft_Cloud\OurHelper\bin\Release\OurHelper.dll
+E:\workspace\VenuSoft_Cloud\OurHelper\bin\Release\OurHelper.pdb
+E:\workspace\VenuSoft_Cloud\OurHelper\bin\Release\Microsoft.Http.dll
+E:\workspace\VenuSoft_Cloud\OurHelper\obj\Release\OurHelper.dll
+E:\workspace\VenuSoft_Cloud\OurHelper\obj\Release\OurHelper.pdb
+E:\workspace\VenuSoft_Cloud\OurHelper\bin\Release\Newtonsoft.Json.dll
